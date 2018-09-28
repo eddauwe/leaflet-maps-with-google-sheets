@@ -979,30 +979,8 @@ $(window).on('load', function() {
    * Triggers the load of the spreadsheet and map creation
    */
    var mapData;
-
-   $.ajax({
-       url:'csv/Options.csv',
-       type:'HEAD',
-       error: function() {
-         // Options.csv does not exist, so use Tabletop to fetch data from
-         // the Google sheet
-         mapData = Tabletop.init({
-           key: googleDocURL,
-           callback: function(data, mapData) { onMapDataLoad(); }
-         });
-       },
-       success: function() {
-         // Get all data from .csv files
-         mapData = Procsv;
-         mapData.load({
-           self: mapData,
-           tabs: ['Options','Polygons', 'Polylines'],
-           callback: onMapDataLoad
-         });
-       }
-   });
+   var pointData;
   
-  var pointData;
   
   /*load point data from other spreadsheet*/
   $.ajax({
@@ -1026,6 +1004,32 @@ $(window).on('load', function() {
          });
        }
    });
+
+   $.ajax({
+       url:'csv/Options.csv',
+       type:'HEAD',
+       error: function() {
+         // Options.csv does not exist, so use Tabletop to fetch data from
+         // the Google sheet
+         mapData = Tabletop.init({
+           key: googleDocURL,
+           callback: function(data, mapData) { onMapDataLoad(); }
+         });
+       },
+       success: function() {
+         // Get all data from .csv files
+         mapData = Procsv;
+         mapData.load({
+           self: mapData,
+           tabs: ['Options','Polygons', 'Polylines'],
+           callback: onMapDataLoad
+         });
+       }
+   });
+  
+  
+  
+  
 
   /**
    * Reformulates documentSettings as a dictionary, e.g.
