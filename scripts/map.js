@@ -616,7 +616,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    var points = mapData.sheets(constants.pointsSheetName);
+    var points = pointData.sheets(constants.pointsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
@@ -983,6 +983,31 @@ $(window).on('load', function() {
          mapData.load({
            self: mapData,
            tabs: ['Options', 'Points', 'Polygons', 'Polylines'],
+           callback: onMapDataLoad
+         });
+       }
+   });
+  
+  var pointData;
+  
+  /*load point data from other spreadsheet*/
+  $.ajax({
+       url:'csv/Options.csv',
+       type:'HEAD',
+       error: function() {
+         // Options.csv does not exist, so use Tabletop to fetch data from
+         // the Google sheet
+         pointData = Tabletop.init({
+           key: googleDocURLpoints,
+           callback: function(data, pointData) { onMapDataLoad(); }
+         });
+       },
+       success: function() {
+         // Get all data from .csv files
+         pointData = Procsv;
+         pointData.load({
+           self: pointData,
+           tabs: ['Points'],
            callback: onMapDataLoad
          });
        }
