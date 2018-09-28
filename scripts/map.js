@@ -618,13 +618,13 @@ $(window).on('load', function() {
     var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
 
-    createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
+    /*createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
     i = 1;
     while (mapData.sheets(constants.polygonsSheetName + i)) {
       createPolygonSettings(mapData.sheets(constants.polygonsSheetName + i).elements);
       i++;
       polygonSheets++;
-    }
+    }*/
 
     document.title = getSetting('_mapTitle');
     addBaseMap();
@@ -643,19 +643,19 @@ $(window).on('load', function() {
     centerAndZoomMap(group);
 
     // Add polylines
-    var polylines = mapData.sheets(constants.polylinesSheetName);
+    /*var polylines = mapData.sheets(constants.polylinesSheetName);
     if (polylines && polylines.elements.length > 0) {
       processPolylines(polylines.elements);
     } else {
       completePolylines = true;
-    }
+    }*/
 
     // Add polygons
-    if (getPolygonSetting(0, '_polygonsGeojsonURL')) {
+    /*if (getPolygonSetting(0, '_polygonsGeojsonURL')) {
       loadAllGeojsons(0);
     } else {
       completePolygons = true;
-    }
+    }*/
 
     // Add Nominatim Search control
     if (getSetting('_mapSearch') !== 'off') {
