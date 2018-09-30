@@ -933,7 +933,7 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    L.tileLayer.provider(basemap, {
+    L.tileLayer.provider('Stamen.Watercolor', {
       maxZoom: 18
     }).addTo(map);
     L.control.attribution({
