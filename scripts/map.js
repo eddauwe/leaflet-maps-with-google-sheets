@@ -630,7 +630,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    /*var points = pointData.sheets(constants.pointsSheetName);
+    var points = pointData.sheets(constants.pointsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
@@ -640,7 +640,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
 
-    centerAndZoomMap(group);*/
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
@@ -982,28 +982,7 @@ $(window).on('load', function() {
    var pointData;
   
   
-  /*load point data from other spreadsheet*/
-  $.ajax({
-       url:'csv/Options.csv',
-       type:'HEAD',
-       error: function() {
-         // Options.csv does not exist, so use Tabletop to fetch data from
-         // the Google sheet
-         pointData = Tabletop.init({
-           key: googleDocURLpoints,
-           callback: function(data, pointData) { onPointDataLoad(); }
-         });
-       },
-       success: function() {
-         // Get all data from .csv files
-         pointData = Procsv;
-         pointData.load({
-           self: pointData,
-           tabs: ['Points'],
-           callback: onPointDataLoad
-         });
-       }
-   });
+  
 
    $.ajax({
        url:'csv/Options.csv',
@@ -1028,7 +1007,28 @@ $(window).on('load', function() {
    });
   
   
-  
+  /*load point data from other spreadsheet*/
+  $.ajax({
+       url:'csv/Options.csv',
+       type:'HEAD',
+       error: function() {
+         // Options.csv does not exist, so use Tabletop to fetch data from
+         // the Google sheet
+         pointData = Tabletop.init({
+           key: googleDocURLpoints,
+           callback: function(data, pointData) { onMapDataLoad(); }
+         });
+       },
+       success: function() {
+         // Get all data from .csv files
+         pointData = Procsv;
+         pointData.load({
+           self: pointData,
+           tabs: ['Points'],
+           callback: onMapDataLoad
+         });
+       }
+   });
   
 
   /**
