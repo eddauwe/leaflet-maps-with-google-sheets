@@ -933,12 +933,14 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    L.tileLayer.provider('Stamen.Watercolor', {
+    var basemap2=L.tileLayer.provider('Stamen.Watercolor', {
       maxZoom: 18
-    }).addTo(map);
+    });
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
+    var basemaps={"Watercolor map":basemap2};
+    L.control.layers(basemaps).addTo(map);
   }
 
   /**
