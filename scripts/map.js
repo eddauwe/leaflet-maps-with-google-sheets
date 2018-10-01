@@ -933,13 +933,19 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    var basemap2=L.tileLayer.provider('Stamen.Watercolor', {
+    var watercolorlayer=L.tileLayer.provider('Stamen.Watercolor', {
       maxZoom: 18
     });
+    var mapbox=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiZWRkYXV3ZSIsImEiOiJjaXhyaXkzaTAwMDJpMzNwYm9kNzBqdmZ2In0.xJLYRTqLMrWllResz6DxxQ'
+});
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
-    var basemaps={"Watercolor map":basemap2};
+    var basemaps={"Watercolor layer":watercolorlayer,"Mapbox layer":mapbox};
     L.control.layers(basemaps).addTo(map);
   }
 
