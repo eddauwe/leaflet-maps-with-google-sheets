@@ -945,6 +945,8 @@ $(window).on('load', function() {
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
+    watercolorlayer.addTo(map);
+    mapbox.addTo(map);
     var basemaps={"Watercolor layer":watercolorlayer,"Mapbox layer":mapbox};
     L.control.layers(basemaps).addTo(map);
   }
