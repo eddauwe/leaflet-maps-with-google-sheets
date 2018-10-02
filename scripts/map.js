@@ -605,11 +605,11 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements);
-      group = mapPoints(points.elements, layers);
+      //group = mapPoints(points.elements, layers);
     } else {
       completePoints = true;
     }
-    centerAndZoomMap(group);
+    //centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
@@ -630,7 +630,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    /*var points = pointData.sheets(constants.pointsSheetName);
+    var points = pointData.sheets(constants.pointsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
@@ -640,7 +640,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
 
-    centerAndZoomMap(group);*/
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
