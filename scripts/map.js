@@ -1037,7 +1037,7 @@ $(window).on('load', function() {
          // the Google sheet
          pointData = Tabletop.init({
            key: googleDocURLpoints,
-           callback: function(data, pointData) { onMapDataLoad(); }
+           callback: function(data, pointData) { onPointDataLoad(); }
          });
        },
        success: function() {
@@ -1046,7 +1046,7 @@ $(window).on('load', function() {
          pointData.load({
            self: pointData,
            tabs: ['Points'],
-           callback: onMapDataLoad
+           callback: onPointDataLoad
          });
        }
    });
