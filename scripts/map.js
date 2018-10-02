@@ -123,9 +123,9 @@ $(window).on('load', function() {
         : createMarkerIcon(iconel['Marker Icon'],
           'fa',
           point['Marker Color'].toLowerCase(),
-          point['Icon Color'])
+          point['Icon Color']);
                            
-    );
+    
       }}
                            
       if (point.Latitude !== '' && point.Longitude !== '') {
