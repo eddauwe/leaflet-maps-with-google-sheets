@@ -1014,7 +1014,7 @@ $(window).on('load', function() {
          mapData = Procsv;
          mapData.load({
            self: mapData,
-           tabs: ['Options','Points','Polygons', 'Polylines'],
+           tabs: ['Options','Polygons', 'Polylines'],
            callback: onMapDataLoad
          });
        }
@@ -1051,7 +1051,7 @@ $(window).on('load', function() {
          pointData = Procsv;
          pointData.load({
            self: pointData,
-           tabs: ['Points'],
+           tabs: ['Points','MapIcons'],
            callback: onPointDataLoad
          });
        }
