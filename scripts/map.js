@@ -605,11 +605,12 @@ $(window).on('load', function() {
 // Add point markers to the map
   function onPointDataLoad(){
     var points = pointData.sheets(constants.pointsSheetName);
+    var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements);
-      //group = mapPoints(points.elements, layers);
+      group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
@@ -634,7 +635,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    var points = pointData.sheets(constants.pointsSheetName);
+    /*var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
@@ -645,7 +646,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
 
-    centerAndZoomMap(group);
+    centerAndZoomMap(group);*/
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
