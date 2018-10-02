@@ -605,7 +605,7 @@ $(window).on('load', function() {
 // Add point markers to the map
   function onPointDataLoad(){
     var points = pointData.sheets(constants.pointsSheetName);
-    var icons=pointData.sheets(constants.iconsSheetName);
+    //var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
@@ -641,7 +641,7 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements);
-      group = mapPoints(points.elements,icons.elements, layers);
+      group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
