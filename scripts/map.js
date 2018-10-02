@@ -97,7 +97,7 @@ $(window).on('load', function() {
   /**
    * Assigns points to appropriate layers and clusters them if needed
    */
-  function mapPoints(points, layers) {
+  function mapPoints(points,icons, layers) {
     var markerArray = [];
     // check that map has loaded before adding points to it?
     for (var i in points) {
@@ -111,7 +111,9 @@ $(window).on('load', function() {
       : [32, 32];
 
       var anchor = [size[0] / 2, size[1]];
-
+      for (var e in icons) {var iconel = icons[e];
+      if (iconel['Group']==point['Group'])
+      {
       var icon = (point['Marker Icon'].indexOf('.') > 0)
         ? L.icon({
           iconUrl: point['Marker Icon'],
@@ -122,8 +124,11 @@ $(window).on('load', function() {
           'fa',
           point['Marker Color'].toLowerCase(),
           point['Icon Color']
+                           }
+                           }
         );
-
+      
+                           
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
@@ -631,11 +636,12 @@ $(window).on('load', function() {
 
     // Add point markers to the map
     var points = pointData.sheets(constants.pointsSheetName);
+    var icons=pointData.sheets("TypeIcons");
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements);
-      group = mapPoints(points.elements, layers);
+      group = mapPoints(points.elements,icons.elements, layers);
     } else {
       completePoints = true;
     }
