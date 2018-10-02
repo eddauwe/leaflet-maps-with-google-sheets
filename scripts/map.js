@@ -605,11 +605,11 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements);
-      //group = mapPoints(points.elements, layers);
+      group = mapPoints(points.elements, layers);
     } else {
       completePoints = true;
     }
-    //centerAndZoomMap(group);
+    centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
