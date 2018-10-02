@@ -122,8 +122,8 @@ $(window).on('load', function() {
         })
         : createMarkerIcon(iconel['Marker Icon'],
           'fa',
-          point['Marker Color'].toLowerCase(),
-          point['Icon Color']);
+          iconel['Marker Color'].toLowerCase(),
+          iconel['Icon Color']);
                            
     
       }}
