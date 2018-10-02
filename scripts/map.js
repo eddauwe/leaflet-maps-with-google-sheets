@@ -173,19 +173,19 @@ $(window).on('load', function() {
         position: pos,
       });
 
-      /*if (getSetting('_pointsLegendPos') !== 'off') {
+      if (getSetting('_pointsLegendPos') !== 'off') {
         //console.log(pointsLegend)
         pointsLegend.addTo(map);
         pointsLegend._container.id = 'points-legend';
         pointsLegend._container.className += ' ladder';
-      }*/
+      }
     }
 
-    /*$('#points-legend').prepend('<h6 class="pointer">' + getSetting('_pointsLegendTitle') + '</h6>');
+    $('#points-legend').prepend('<h6 class="pointer">' + getSetting('_pointsLegendTitle') + '</h6>');
     if (getSetting('_pointsLegendIcon') != '') {
       $('#points-legend h6').prepend('<span class="legend-icon"><i class="fa '
         + getSetting('_pointsLegendIcon') + '"></i></span>');
-    }*/
+    }
 
     var displayTable = getSetting('_displayTable') == 'on' ? true : false;
 
@@ -610,11 +610,11 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements);
-      group = mapPoints(points.elements,icons.elements,layers);
+      //group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
-    centerAndZoomMap(group);
+    //centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
@@ -635,7 +635,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    /*var points = pointData.sheets(constants.pointsSheetName);
+    var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
@@ -646,7 +646,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
 
-    centerAndZoomMap(group);*/
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
