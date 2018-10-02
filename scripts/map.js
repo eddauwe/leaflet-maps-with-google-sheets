@@ -102,18 +102,18 @@ $(window).on('load', function() {
     // check that map has loaded before adding points to it?
     for (var i in points) {
       var point = points[i];
-
+      for (var e in icons) {var iconel = icons[e];
+      if (iconel['Group']==point['Group'])
+      {
       // If icon contains '.', assume it's a path to a custom icon,
       // otherwise create a Font Awesome icon
-      var iconSize = point['Custom Size'];
+      var iconSize = iconel['Custom Size'];
       var size = (iconSize.indexOf('x') > 0)
       ? [parseInt(iconSize.split('x')[0]), parseInt(iconSize.split('x')[1])]
       : [32, 32];
 
       var anchor = [size[0] / 2, size[1]];
-      for (var e in icons) {var iconel = icons[e];
-      if (iconel['Group']==point['Group'])
-      {
+      
       var icon = (iconel['Marker Icon'].indexOf('.') > 0)
         ? L.icon({
           iconUrl: iconel['Marker Icon'],
