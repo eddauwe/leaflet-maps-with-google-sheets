@@ -697,9 +697,9 @@ $(window).on('load', function() {
       L.control.zoom({position: getSetting('_mapZoom')}).addTo(map);
     }*/
 
-    map.on('zoomend', function() {
+    /*map.on('zoomend', function() {
       togglePolygonLabels();
-    });
+    });*/
 
     addTitle();
 
@@ -720,16 +720,16 @@ $(window).on('load', function() {
     showMap();
 
     function showMap() {
-      if (completePoints && completePolylines && completePolygons) {
+      if (completePoints && completePolylines) {
         $('.ladder h6').append('<span class="legend-arrow"><i class="fa fa-chevron-down"></i></span>');
         $('.ladder h6').addClass('minimize');
 
-        for (i in allPolygonLegends) {
+        /*for (i in allPolygonLegends) {
           if (getPolygonSetting(i, '_polygonsLegendIcon') != '') {
             $('.polygons-legend' + i + ' h6').prepend(
               '<span class="legend-icon"><i class="fa ' + getPolygonSetting(i, '_polygonsLegendIcon') + '"></i></span>');
           }
-        }
+        }*/
 
         $('.ladder h6').click(function() {
           if ($(this).hasClass('minimize')) {
@@ -757,7 +757,7 @@ $(window).on('load', function() {
           initIntroPopup(getSetting('_introPopupText'), map.getCenter());
         };
 
-        togglePolygonLabels();
+        //togglePolygonLabels();
       } else {
         setTimeout(showMap, 50);
       }
