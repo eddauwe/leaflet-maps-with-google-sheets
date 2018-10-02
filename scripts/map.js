@@ -618,13 +618,13 @@ $(window).on('load', function() {
     var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
 
-    createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
+    /*createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
     i = 1;
     while (mapData.sheets(constants.polygonsSheetName + i)) {
       createPolygonSettings(mapData.sheets(constants.polygonsSheetName + i).elements);
       i++;
       polygonSheets++;
-    }
+    }*/
 
     document.title = getSetting('_mapTitle');
     addBaseMap();
