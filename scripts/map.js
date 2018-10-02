@@ -66,16 +66,17 @@ $(window).on('load', function() {
    * Given a collection of points, determines the layers based on 'Group'
    * column in the spreadsheet.
    */
-  function determineLayers(points,icons) {
+  function determineLayers(points) {
     var layerNamesFromSpreadsheet = [];
     var layers = {};
+    var icons = pointData.sheets(constants.iconsSheetName)
     for (var i in points) {
       var pointLayerNameFromSpreadsheet = points[i].Group;
       if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
         markerColors.push(
-          icons[i]['Marker Icon'].indexOf('.') > 0
-          ? icons[i]['Marker Icon']
-          : icons[i]['Marker Color']
+          icons.elements[i]['Marker Icon'].indexOf('.') > 0
+          ? icons.elements[i]['Marker Icon']
+          : icons.elements[i]['Marker Color']
         );
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
@@ -640,7 +641,7 @@ $(window).on('load', function() {
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
-      layers = determineLayers(points.elements,icons.elements);
+      layers = determineLayers(points.elements);
       group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
