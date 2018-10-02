@@ -651,11 +651,11 @@ $(window).on('load', function() {
     }
 
     // Add polygons
-    if (getPolygonSetting(0, '_polygonsGeojsonURL')) {
+    /*if (getPolygonSetting(0, '_polygonsGeojsonURL')) {
       loadAllGeojsons(0);
     } else {
       completePolygons = true;
-    }
+    }*/
 
     // Add Nominatim Search control
     if (getSetting('_mapSearch') !== 'off') {
