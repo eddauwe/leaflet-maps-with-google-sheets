@@ -693,9 +693,9 @@ $(window).on('load', function() {
     }
 
     // Add zoom control
-    /*if (getSetting('_mapZoom') !== 'off') {
+    if (getSetting('_mapZoom') !== 'off') {
       L.control.zoom({position: getSetting('_mapZoom')}).addTo(map);
-    }*/
+    }
 
     /*map.on('zoomend', function() {
       togglePolygonLabels();
