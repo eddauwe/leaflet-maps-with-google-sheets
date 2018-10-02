@@ -114,16 +114,16 @@ $(window).on('load', function() {
       for (var e in icons) {var iconel = icons[e];
       if (iconel['Group']==point['Group'])
       {
-      var icon = (point['Marker Icon'].indexOf('.') > 0)
+      var icon = (iconel['Marker Icon'].indexOf('.') > 0)
         ? L.icon({
-          iconUrl: point['Marker Icon'],
+          iconUrl: iconel['Marker Icon'],
           iconSize: size,
           iconAnchor: anchor
         })
-        : createMarkerIcon(point['Marker Icon'],
+        : createMarkerIcon(iconel['Marker Icon'],
           'fa',
           point['Marker Color'].toLowerCase(),
-          point['Icon Color']
+          point['Icon Color'])
                            }
                            }
         );
