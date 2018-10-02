@@ -630,7 +630,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    var points = pointData.sheets(constants.pointsSheetName);
+    /*var points = pointData.sheets(constants.pointsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
@@ -638,7 +638,7 @@ $(window).on('load', function() {
       group = mapPoints(points.elements, layers);
     } else {
       completePoints = true;
-    }
+    }*/
 
     centerAndZoomMap(group);
 
