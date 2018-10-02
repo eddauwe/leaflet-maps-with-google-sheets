@@ -124,10 +124,9 @@ $(window).on('load', function() {
           'fa',
           point['Marker Color'].toLowerCase(),
           point['Icon Color'])
-                           }
-                           }
-    }
-      
+                           
+    );
+      }}
                            
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
