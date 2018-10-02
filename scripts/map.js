@@ -614,7 +614,7 @@ $(window).on('load', function() {
     } else {
       completePoints = true;
     }
-    //centerAndZoomMap(group);
+    centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
