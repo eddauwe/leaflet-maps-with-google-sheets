@@ -1051,7 +1051,7 @@ $(window).on('load', function() {
          pointData = Procsv;
          pointData.load({
            self: pointData,
-           tabs: ['Points','MapIcons'],
+           tabs: ['Points','TypeIcons'],
            callback: onPointDataLoad
          });
        }
