@@ -66,17 +66,16 @@ $(window).on('load', function() {
    * Given a collection of points, determines the layers based on 'Group'
    * column in the spreadsheet.
    */
-  function determineLayers(points) {
+  function determineLayers(points,icons) {
     var layerNamesFromSpreadsheet = [];
     var layers = {};
-    var icons = pointData.sheets(constants.iconsSheetName)
     for (var i in points) {
       var pointLayerNameFromSpreadsheet = points[i].Group;
       if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
         markerColors.push(
-          icons.elements[i]['Marker Icon'].indexOf('.') > 0
-          ? icons.elements[i]['Marker Icon']
-          : icons.elements[i]['Marker Color']
+          icons[i]['Marker Icon'].indexOf('.') > 0
+          ? icons[i]['Marker Icon']
+          : icons[i]['Marker Color']
         );
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
@@ -606,11 +605,11 @@ $(window).on('load', function() {
 // Add point markers to the map
   function onPointDataLoad(){
     var points = pointData.sheets(constants.pointsSheetName);
-    //var icons=pointData.sheets(constants.iconsSheetName);
+    var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
-      //layers = determineLayers(points.elements);
+      layers = determineLayers(points.elements,icons.elements);
       //group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
@@ -641,7 +640,7 @@ $(window).on('load', function() {
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
-      layers = determineLayers(points.elements);
+      layers = determineLayers(points.elements,icons.elements);
       group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
@@ -754,7 +753,7 @@ $(window).on('load', function() {
           }
         });
 
-        //$('.ladder h6').get(0).click();
+        $('.ladder h6').get(0).click();
 
         $('#map').css('visibility', 'visible');
         $('.loader').hide();
