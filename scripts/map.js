@@ -638,9 +638,9 @@ $(window).on('load', function() {
       group = mapPoints(points.elements, layers);
     } else {
       completePoints = true;
-    }*/
+    }
 
-    centerAndZoomMap(group);
+    centerAndZoomMap(group);*/
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
