@@ -126,7 +126,7 @@ $(window).on('load', function() {
           point['Icon Color'])
                            }
                            }
-        );
+    });
       
                            
       if (point.Latitude !== '' && point.Longitude !== '') {
