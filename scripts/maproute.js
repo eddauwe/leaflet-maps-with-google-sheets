@@ -145,7 +145,7 @@ $(window).on('load', function() {
 var gpxroute=new L.GPX(gpx, {async: true}).on('loaded', function(e) {
   //map.fitBounds(e.target.getBounds());
 })
-  gpxroute.addTo(layers[point.Group]);
+  gpxroute.addTo(map);
       }
     }
 
