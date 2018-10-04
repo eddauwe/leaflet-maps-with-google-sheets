@@ -142,9 +142,10 @@ $(window).on('load', function() {
       }
       
       var gpx = 'gesamtstrecke-eifelsteig.gpx'; // URL to your GPX file or the GPX itself
-new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+var gpxroute=new L.GPX(gpx, {async: true}).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
-}).addTo(map);
+})
+  gpxroute.addTo(layers[point.Group]);
       
     }
 
