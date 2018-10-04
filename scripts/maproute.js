@@ -71,7 +71,7 @@ $(window).on('load', function() {
     var layers = {};
     for (var i in points) {
       var pointLayerNameFromSpreadsheet = points[i].Group;
-      if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
+      if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1 && pointLayerNameFromSpreadsheet!=="route") {
         markerColors.push(
           icons[i]['Marker Icon'].indexOf('.') > 0
           ? icons[i]['Marker Icon']
