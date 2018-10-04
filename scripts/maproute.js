@@ -142,10 +142,9 @@ $(window).on('load', function() {
       }
       if (point['group']=="route"){
       var gpx = point.Location; // URL to your GPX file or the GPX itself
-var gpxroute=new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+  new L.GPX(gpx, {async: true}).on('loaded', function(e) {
   //map.fitBounds(e.target.getBounds());
-})
-  gpxroute.addTo(map);
+}).addTo(map);
       }
     }
 
