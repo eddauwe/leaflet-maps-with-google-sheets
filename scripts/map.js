@@ -585,12 +585,11 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
-      group = mapPoints(points.elements,icons.elements,layers);
+      //group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
-    centerAndZoomMap(group);
-    
+    //centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
@@ -614,15 +613,15 @@ $(window).on('load', function() {
     var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
-    //var group = '';
-    if (icons && points && points.elements.length > 0 && icons.elements.length > 0) {
+    var group = '';
+    if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
-      //group = mapPoints(points.elements,icons.elements,layers);
+      group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
 
-    //centerAndZoomMap(group);
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
@@ -974,7 +973,27 @@ $(window).on('load', function() {
    var pointData;
   
   
-  
+  $.ajax({
+       url:'csv/Options.csv',
+       type:'HEAD',
+       error: function() {
+         // Options.csv does not exist, so use Tabletop to fetch data from
+         // the Google sheet
+         mapData = Tabletop.init({
+           key: googleDocURL,
+           callback: function(data, mapData) { onMapDataLoad(); }
+         });
+       },
+       success: function() {
+         // Get all data from .csv files
+         mapData = Procsv;
+         mapData.load({
+           self: mapData,
+           tabs: ['Options','Polygons', 'Polylines'],
+           callback: onMapDataLoad
+         });
+       }
+   });
 
   /**
    * Reformulates documentSettings as a dictionary, e.g.
@@ -1009,32 +1028,6 @@ $(window).on('load', function() {
            self: pointData,
            tabs: ['Points','TypeIcons'],
            callback: onPointDataLoad
-         });
-       }
-   });
-  
-  
-  
-  
-  
-  $.ajax({
-       url:'csv/Options.csv',
-       type:'HEAD',
-       error: function() {
-         // Options.csv does not exist, so use Tabletop to fetch data from
-         // the Google sheet
-         mapData = Tabletop.init({
-           key: googleDocURL,
-           callback: function(data, mapData) { onMapDataLoad(); }
-         });
-       },
-       success: function() {
-         // Get all data from .csv files
-         mapData = Procsv;
-         mapData.load({
-           self: mapData,
-           tabs: ['Options','Polygons', 'Polylines'],
-           callback: onMapDataLoad
          });
        }
    });
