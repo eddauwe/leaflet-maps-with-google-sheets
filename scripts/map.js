@@ -615,8 +615,8 @@ $(window).on('load', function() {
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     //var group = '';
-    if (points && points.elements.length > 0) {
-      //layers = determineLayers(points.elements,icons.elements);
+    if (icons && points && points.elements.length > 0 && icons.elements.length > 0) {
+      layers = determineLayers(points.elements,icons.elements);
       //group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
