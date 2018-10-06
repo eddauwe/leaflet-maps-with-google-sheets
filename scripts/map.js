@@ -590,6 +590,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
     //centerAndZoomMap(group);
+    
   }
   /**
    * Here all data processing from the spreadsheet happens
@@ -621,7 +622,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
 
-    //centerAndZoomMap(group);
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
