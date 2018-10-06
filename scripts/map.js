@@ -617,11 +617,12 @@ $(window).on('load', function() {
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
       group = mapPoints(points.elements,icons.elements,layers);
+      centerAndZoomMap(group);
     } else {
       completePoints = true;
     }
 
-    centerAndZoomMap(group);
+    
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
