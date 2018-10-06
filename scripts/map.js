@@ -143,6 +143,7 @@ $(window).on('load', function() {
     }
 
     var group = L.featureGroup(markerArray);
+    map.fitBounds(group.getBounds());
     var clusters = (getSetting('_markercluster') === 'on') ? true : false;
 
     // if layers.length === 0, add points to map instead of layer
@@ -646,7 +647,7 @@ $(window).on('load', function() {
       completePoints = true;
     }
 
-    centerAndZoomMap(group);
+    //centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
