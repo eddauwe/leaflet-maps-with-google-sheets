@@ -582,7 +582,7 @@ $(window).on('load', function() {
     var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
-    var group = '';
+    //var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
       //group = mapPoints(points.elements,icons.elements,layers);
