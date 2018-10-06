@@ -28,12 +28,37 @@ $(window).on('load', function() {
    * to specified (lat, lon) and zoom if all three are specified
    */
   function centerAndZoomMap(points) {
-    
+    var lat = map.getCenter().lat, latSet = false;
+    var lon = map.getCenter().lng, lonSet = false;
+    var zoom = 12, zoomSet = false;
+    var center;
+
+    if (getSetting('_initLat') !== '') {
+      lat = getSetting('_initLat');
+      latSet = true;
+    }
+
+    if (getSetting('_initLon') !== '') {
+      lon = getSetting('_initLon');
+      lonSet = true;
+    }
+
+    if (getSetting('_initZoom') !== '') {
+      zoom = parseInt(getSetting('_initZoom'));
+      zoomSet = true;
+    }
+
+    if ((latSet && lonSet) || !points) {
+      center = L.latLng(lat, lon);
+    } else {
       center = points.getBounds().getCenter();
+    }
 
+    if (!zoomSet && points) {
       zoom = map.getBoundsZoom(points.getBounds());
+    }
 
-      map.setView(center, zoom);
+    map.setView(center, zoom);
   }
 
 
@@ -583,14 +608,13 @@ $(window).on('load', function() {
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
-    if (points && points.elements.length > 0 && icons.elements.length > 0) {
+    if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
-      group = mapPoints(points.elements,icons.elements,layers);
-      centerAndZoomMap(group);
+      //group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
-    
+    //centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
@@ -615,15 +639,14 @@ $(window).on('load', function() {
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
-    if (points && points.elements.length > 0 && icons.elements.length >0) {
+    if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
       group = mapPoints(points.elements,icons.elements,layers);
-      centerAndZoomMap(group);
     } else {
       completePoints = true;
     }
 
-    
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
