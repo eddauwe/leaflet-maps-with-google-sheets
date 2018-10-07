@@ -72,11 +72,16 @@ $(window).on('load', function() {
     for (var i in points) {
       var pointLayerNameFromSpreadsheet = points[i].Group;
       if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
+        for (var e in icons){
+      if (icons[e].Group==points[i].Group){
         markerColors.push(
-          icons[i]['Marker Icon'].indexOf('.') > 0
-          ? icons[i]['Marker Icon']
-          : icons[i]['Marker Color']
+          icons[e]['Marker Icon'].indexOf('.') > 0
+          ? icons[e]['Marker Icon']
+          : icons[e]['Marker Color']
         );
+      }
+      }
+      }
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
     }
