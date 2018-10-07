@@ -75,9 +75,9 @@ $(window).on('load', function() {
         for (e in icons){iconel=icons[e];
           if (iconel['Group']==points[i].Group){
         markerColors.push(
-          icons[i]['Marker Icon'].indexOf('.') > 0
-          ? icons[i]['Marker Icon']
-          : icons[i]['Marker Color']
+          iconel['Marker Icon'].indexOf('.') > 0
+          ? iconel['Marker Icon']
+          : iconel['Marker Color']
         )}};
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
