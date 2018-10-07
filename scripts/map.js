@@ -84,7 +84,7 @@ $(window).on('load', function() {
       }
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
-    }
+    
 
     // if none of the points have named layers or if there was only one name, return no layers
     if (layerNamesFromSpreadsheet.length === 1) {
