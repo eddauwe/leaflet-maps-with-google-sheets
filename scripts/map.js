@@ -69,6 +69,7 @@ $(window).on('load', function() {
   function determineLayers(points,icons) {
     var layerNamesFromSpreadsheet = [];
     var layers = {};
+    markerColors=[];
     for (var i in points) {
       var pointLayerNameFromSpreadsheet = points[i].Group;
       if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
