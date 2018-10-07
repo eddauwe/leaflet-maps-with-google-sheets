@@ -69,23 +69,17 @@ $(window).on('load', function() {
   function determineLayers(points,icons) {
     var layerNamesFromSpreadsheet = [];
     var layers = {};
-    markerColors=[];
     for (var i in points) {
       var pointLayerNameFromSpreadsheet = points[i].Group;
       if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
-        for (var e in icons){
-      if (icons[e].Group==points[i].Group){
         markerColors.push(
-          icons[e]['Marker Icon'].indexOf('.') > 0
-          ? icons[e]['Marker Icon']
-          : icons[e]['Marker Color']
+          icons[i]['Marker Icon'].indexOf('.') > 0
+          ? icons[i]['Marker Icon']
+          : icons[i]['Marker Color']
         );
-      }
-      }
-      }
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
-    
+    }
 
     // if none of the points have named layers or if there was only one name, return no layers
     if (layerNamesFromSpreadsheet.length === 1) {
@@ -617,7 +611,7 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
-      group = mapPoints(points.elements,icons.elements,layers);
+      //group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
@@ -648,7 +642,7 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
-      //group = mapPoints(points.elements,icons.elements,layers);
+      group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
     }
