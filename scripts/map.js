@@ -142,11 +142,21 @@ $(window).on('load', function() {
 
         markerArray.push(marker);
       }
-      if (point['Group']=="route"){
-      var gpx = point['Location']; // URL to your GPX file or the GPX itself
-  new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+      
+    }
+    
+    // add lines to map
+    function mapLines(lines){
+      for (var i in lines) {
+        var line=lines[i];
+        if (line['Group']='route'){
+          
+          var gpx = 'geometry/gesamtstrecke-eifelsteig.gpx'; //line['Location'] URL to your GPX file or the GPX itself
+new L.GPX(gpx, {async: true}).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
-}).addTo(layers[point.Group]);
+}).addTo(map);
+          
+        }
       }
     }
 
@@ -651,6 +661,7 @@ $(window).on('load', function() {
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
       group = mapPoints(points.elements,icons.elements,layers);
+      groupline=mapLines(points.elements);
     } else {
       completePoints = true;
     }
