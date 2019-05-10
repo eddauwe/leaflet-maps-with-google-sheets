@@ -142,6 +142,12 @@ $(window).on('load', function() {
 
         markerArray.push(marker);
       }
+      if (point['Group']=="route"){
+      var gpx = point['Location']; // URL to your GPX file or the GPX itself
+  new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
+      }
     }
 
     var group = L.featureGroup(markerArray);
