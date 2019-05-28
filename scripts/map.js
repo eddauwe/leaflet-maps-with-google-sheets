@@ -756,11 +756,11 @@ $(window).on('load', function() {
           }
         });
         
-        $('.ladder h6').click();
         
         $('#map').css('visibility', 'visible');
         $('.loader').hide();
 
+        $('.ladder h6').click();
         
         // Open intro popup window in the center of the map
         if (getSetting('_introPopupText') != '') {
