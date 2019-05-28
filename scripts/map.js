@@ -84,7 +84,7 @@ $(window).on('load', function() {
     }
 
     // if none of the points have named layers or if there was only one name, return no layers
-    if (layerNamesFromSpreadsheet.length === 1) {
+    if (layerNamesFromSpreadsheet.length === 0) {
       layers = undefined;
     } else {
       for (var i in layerNamesFromSpreadsheet) {
