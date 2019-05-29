@@ -757,7 +757,7 @@ $(window).on('load', function() {
         });
         
         
-        $('.ladder h6').get(0).click();
+        
 
         $('#map').css('visibility', 'visible');
         $('.loader').hide();
@@ -771,7 +771,9 @@ $(window).on('load', function() {
       } else {
         setTimeout(showMap, 50);
       }
+      $('.ladder h6').get(0).click();
     }
+    
   }
 
   /**
