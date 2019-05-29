@@ -607,6 +607,7 @@ $(window).on('load', function() {
   /*add point markers to the map*/
 // Add point markers to the map
   function onPointDataLoad(){
+    console.log("aparte functie onpointdataload");
     var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
@@ -617,12 +618,13 @@ $(window).on('load', function() {
     } else {
       completePoints = true;
     }
+    console.log(points);
     //centerAndZoomMap(group);
   }
   /**
    * Here all data processing from the spreadsheet happens
    */
-  function onMapDataLoad() {
+  function onMapDataLoad() {    
     var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
 
@@ -636,7 +638,7 @@ $(window).on('load', function() {
 
     document.title = getSetting('_mapTitle');
     addBaseMap();
-
+    console.log("functie onpointdataload binnen functie onmapdataload");
     // Add point markers to the map
     var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
@@ -648,6 +650,7 @@ $(window).on('load', function() {
     } else {
       completePoints = true;
     }
+    console.log(points)
 
     //centerAndZoomMap(group);
 
