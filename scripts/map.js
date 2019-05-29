@@ -729,7 +729,7 @@ $(window).on('load', function() {
     showMap();
 
     function showMap() {
-      if (completePoints && completePolylines) {
+      if (completePoints) {
         $('.ladder h6').append('<span class="legend-arrow"><i class="fa fa-chevron-down"></i></span>');
         $('.ladder h6').addClass('minimize');
 
