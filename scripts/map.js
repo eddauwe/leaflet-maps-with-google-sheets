@@ -1001,7 +1001,27 @@ $(window).on('load', function() {
    var pointData;
   
   
-
+  $.ajax({
+       url:'csv/Options.csv',
+       type:'HEAD',
+       error: function() {
+         // Options.csv does not exist, so use Tabletop to fetch data from
+         // the Google sheet
+         mapData = Tabletop.init({
+           key: googleDocURL,
+           callback: function(data, mapData) { onMapDataLoad(); }
+         });
+       },
+       success: function() {
+         // Get all data from .csv files
+         mapData = Procsv;
+         mapData.load({
+           self: mapData,
+           tabs: ['Options','Polygons', 'Polylines'],
+           callback: onMapDataLoad
+         });
+       }
+   });
 
   /**
    * Reformulates documentSettings as a dictionary, e.g.
@@ -1017,31 +1037,30 @@ $(window).on('load', function() {
    
   
   
+  /*load point data from other spreadsheet*/
+  $.ajax({
+       url:'csv/Options.csv',
+       type:'HEAD',
+       error: function() {
+         // Options.csv does not exist, so use Tabletop to fetch data from
+         // the Google sheet
+         pointData = Tabletop.init({
+           key: googleDocURLpoints,
+           callback: function(data, pointData) { onPointDataLoad(); }
+         });
+       },
+       success: function() {
+         // Get all data from .csv files
+         pointData = Procsv;
+         pointData.load({
+           self: pointData,
+           tabs: ['Points','TypeIcons'],
+           callback: onPointDataLoad
+         });
+       }
+   });
   
   
-  
-function initmap() {
-    Tabletop.init( { key: googleDocURL,
-                     callback: function(data, mapData) { onMapDataLoad(); }
-                     } )
-  }
-
-
-  window.addEventListener('DOMContentLoaded', initmap)
-  
-  
-function initpoints() {
-    Tabletop.init( { key: googleDocURLpoints,
-                     callback: function(data, pointData) { onPointDataLoad(); }
-                     } )
-  }
-
-
-  window.addEventListener('DOMContentLoaded', initpoints)
-  
-  
-  
-
   
 
   /**
