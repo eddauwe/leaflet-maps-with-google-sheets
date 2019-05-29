@@ -771,7 +771,7 @@ $(window).on('load', function() {
       } else {
         setTimeout(showMap, 50);
       }
-      $('.ladder h6').get(0).click();
+      
     }
     
   }
