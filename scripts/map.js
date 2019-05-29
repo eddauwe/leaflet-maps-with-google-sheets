@@ -84,7 +84,7 @@ $(window).on('load', function() {
     }
 
     // if none of the points have named layers or if there was only one name, return no layers
-    if (layerNamesFromSpreadsheet.length === 0) {
+    if (layerNamesFromSpreadsheet.length === 1) {
       layers = undefined;
     } else {
       for (var i in layerNamesFromSpreadsheet) {
@@ -136,7 +136,7 @@ $(window).on('load', function() {
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description']);
 
-        if (layers !== undefined && layers.length !== 0) {
+        if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Group]);
         }
 
@@ -729,7 +729,7 @@ $(window).on('load', function() {
     showMap();
 
     function showMap() {
-      if (completePoints) {
+      if (completePoints && completePolylines) {
         $('.ladder h6').append('<span class="legend-arrow"><i class="fa fa-chevron-down"></i></span>');
         $('.ladder h6').addClass('minimize');
 
@@ -755,13 +755,12 @@ $(window).on('load', function() {
               .addClass('fa-chevron-down');
           }
         });
-        
-        
-        
+
+        $('.ladder h6').get(0).click();
 
         $('#map').css('visibility', 'visible');
         $('.loader').hide();
-        
+
         // Open intro popup window in the center of the map
         if (getSetting('_introPopupText') != '') {
           initIntroPopup(getSetting('_introPopupText'), map.getCenter());
@@ -771,9 +770,7 @@ $(window).on('load', function() {
       } else {
         setTimeout(showMap, 50);
       }
-      
     }
-    
   }
 
   /**
