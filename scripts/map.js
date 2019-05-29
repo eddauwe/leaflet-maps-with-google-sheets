@@ -83,8 +83,8 @@ $(window).on('load', function() {
       }
     }
 
-    // if none of the points have named layers or if there was only one name, return no layers
-    if (layerNamesFromSpreadsheet.length === 1) {
+    // if none of the points have named layers, return no layers
+    if (layerNamesFromSpreadsheet.length === 0) {
       layers = undefined;
     } else {
       for (var i in layerNamesFromSpreadsheet) {
@@ -136,7 +136,7 @@ $(window).on('load', function() {
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description']);
 
-        if (layers !== undefined && layers.length !== 1) {
+        if (layers !== undefined && layers.length !== 0) {
           marker.addTo(layers[point.Group]);
         }
 
