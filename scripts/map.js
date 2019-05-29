@@ -1022,8 +1022,8 @@ $(window).on('load', function() {
   
 function initmap() {
     Tabletop.init( { key: googleDocURL,
-                     callback: function(data, mapData) { onMapDataLoad(); },
-                     simpleSheet: true } )
+                     callback: function(data, mapData) { onMapDataLoad(); }
+                     } )
   }
 
 
@@ -1032,8 +1032,8 @@ function initmap() {
   
 function initpoints() {
     Tabletop.init( { key: googleDocURLpoints,
-                     callback: function(data, pointData) { onPointDataLoad(); },
-                     simpleSheet: true } )
+                     callback: function(data, pointData) { onPointDataLoad(); }
+                     } )
   }
 
 
