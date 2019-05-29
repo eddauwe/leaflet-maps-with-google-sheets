@@ -614,7 +614,7 @@ $(window).on('load', function() {
     var group = '';
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
-      group = mapPoints(points.elements,icons.elements,layers);
+      //group = mapPoints(points.elements,icons.elements,layers);
       completePoints=true;
     }
     console.log(points);
@@ -639,7 +639,7 @@ $(window).on('load', function() {
     addBaseMap();
     console.log("onpointdataload binnen functie onmapdataload");
     // Add point markers to the map
-    /*var points = pointData.sheets(constants.pointsSheetName);
+    var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
@@ -649,8 +649,8 @@ $(window).on('load', function() {
       completePoints=true
     } else {
       completePoints = false;
-    }*/
-    console.log(points)
+    }
+    console.log(points);
 
     //centerAndZoomMap(group);
 
@@ -1005,7 +1005,7 @@ $(window).on('load', function() {
   
   
   /*load point data from other spreadsheet*/
-  $.ajax({
+  /*$.ajax({
        url:'csv/Options.csv',
        type:'HEAD',
        error: function() {
@@ -1025,7 +1025,7 @@ $(window).on('load', function() {
            callback: onPointDataLoad
          });
        }
-   });
+   });*/
   
   
   
