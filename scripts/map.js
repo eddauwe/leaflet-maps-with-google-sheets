@@ -638,7 +638,7 @@ $(window).on('load', function() {
     addBaseMap();
 
     // Add point markers to the map
-    var points = pointData.sheets(constants.pointsSheetName);
+    /*var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
@@ -647,7 +647,7 @@ $(window).on('load', function() {
       group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
-    }
+    }*/
 
     //centerAndZoomMap(group);
 
