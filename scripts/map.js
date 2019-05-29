@@ -612,11 +612,12 @@ $(window).on('load', function() {
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
-    if (points && points.elements.length > 0) {
+    if (points && points.elements.length > 0 && completePoints==false) {
       layers = determineLayers(points.elements,icons.elements);
-      //group = mapPoints(points.elements,icons.elements,layers);
+      group = mapPoints(points.elements,icons.elements,layers);
+      completePoints=true;
     } else {
-      completePoints = true;
+      completePoints = false;
     }
     console.log(points);
     //centerAndZoomMap(group);
@@ -644,11 +645,12 @@ $(window).on('load', function() {
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
-    if (points && points.elements.length > 0) {
+    if (points && points.elements.length > 0 && completePoints==false) {
       layers = determineLayers(points.elements,icons.elements);
       group = mapPoints(points.elements,icons.elements,layers);
+      completePoints=true;
     } else {
-      completePoints = true;
+      completePoints = false;
     }
     console.log(points)
 
@@ -729,10 +731,10 @@ $(window).on('load', function() {
     });
 
     // When all processing is done, hide the loader and make the map visible
-    showMap();
+     showMap();
 
     function showMap() {
-      if (completePoints && completePolylines) {
+      if (completePoints) {
         $('.ladder h6').append('<span class="legend-arrow"><i class="fa fa-chevron-down"></i></span>');
         $('.ladder h6').addClass('minimize');
 
