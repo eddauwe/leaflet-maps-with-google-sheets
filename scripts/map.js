@@ -757,7 +757,7 @@ $(window).on('load', function() {
         });
         
         
-        $('.ladder h6').get(0).click();
+        $('.ladder h6').click();
 
         $('#map').css('visibility', 'visible');
         $('.loader').hide();
