@@ -174,7 +174,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       prefix: "fa",
       markerColor: "blue",
       iconColor: "white"
-         })}};
+         })}}
                               }).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
 });
