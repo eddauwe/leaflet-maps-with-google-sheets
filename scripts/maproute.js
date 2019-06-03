@@ -1025,7 +1025,7 @@ new L.GPX(gpx, {async: true}).on('loaded', function(e) {
          // Options.csv does not exist, so use Tabletop to fetch data from
          // the Google sheet
          mapData = Tabletop.init({
-           key: googleDocURL,
+           key: googleDocURLpoints,
            callback: function(data, mapData) { onMapDataLoad(); }
          });
        },
