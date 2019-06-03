@@ -83,8 +83,8 @@ $(window).on('load', function() {
       }
     }
 
-    // if none of the points have named layers or if there was only one name, return no layers
-    if (layerNamesFromSpreadsheet.length === 1) {
+    // if none of the points have named layers, return no layers
+    if (layerNamesFromSpreadsheet.length === 0) {
       layers = undefined;
     } else {
       for (var i in layerNamesFromSpreadsheet) {
@@ -147,19 +147,38 @@ new L.GPX(gpx, {async: true,polyline_options: {
                            
     
       }}
-                           
+      
+      
+      
+      //punten                     
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description']);
 
-        if (layers !== undefined && layers.length !== 1) {
+        if (layers !== undefined && layers.length !== 0) {
           marker.addTo(layers[point.Group]);
         }
 
         markerArray.push(marker);
       }
+      
+      //gpx lijnen
+      else
+      {var gpx = point['Source']; //line['Location'] URL to your GPX file or the GPX itself
+       if (layers !== undefined && layers.length !== 0) {
+         new L.GPX(gpx, {async: true,polyline_options: {
+    color: 'green',
+    opacity: 0.75,
+    weight: 30,
+    lineCap: 'round'
+  }}).on('loaded', function(e) {
+  map.fitBounds(e.target.getBounds());
+}).addTo(layers[point.Group]);                         
+       }
+      }
+      
       
     }
   
@@ -662,7 +681,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
     // Add point markers to the map
     var points = mapData.sheets(constants.pointsSheetName);
     var icons=mapData.sheets(constants.iconsSheetName);
-    var lines=mapData.sheets(constants.linesSheetName);
     var layers;
     var group = '';
     if (points && points.elements.length > 0) {
@@ -670,12 +688,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       group = mapPoints(points.elements,icons.elements,layers);
     } else {
       completePoints = true;
-    }
-    if (lines && lines.elements.length > 0) {
-      grouplines=mapLines(lines.elements);
-    }
-    else {completeLines = true;
-         }
+    }   
 
     //centerAndZoomMap(group);
 
