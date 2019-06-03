@@ -173,7 +173,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     startIconUrl: 'images/start.png',
     endIconUrl: 'images/finish-flag.png',                                 
     //shadowUrl: 'images/pin-shadow.png',
-    wptIconUrls: 'images/location-pin.png'
+    wptIconUrls: {'':'images/location-pin.png'}
   }
                               }).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
