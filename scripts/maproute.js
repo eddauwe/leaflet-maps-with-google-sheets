@@ -101,7 +101,7 @@ $(window).on('load', function() {
     function mapLines(lines){
       for (var i in lines) {
         var line=lines[i];        
-          var gpx = line['Location']; //line['Location'] URL to your GPX file or the GPX itself
+          var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
 new L.GPX(gpx, {async: true,polyline_options: {
     color: 'green',
     opacity: 0.75,
@@ -168,16 +168,15 @@ new L.GPX(gpx, {async: true,polyline_options: {
       else
       {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
        if (layers !== undefined && layers.length !== 0) {
-         new L.GPX(gpx, {async: true,polyline_options: {
+         route=new L.GPX(gpx, {async: true,polyline_options: {
     color: 'green',
     opacity: 0.75,
     weight: 30,
     lineCap: 'round'
   }}).on('loaded', function(e) {
-           var route=e.target;
   map.fitBounds(e.target.getBounds());
-           pointsLegend.addOverlay(route,route.get_name());
-       }).addTo(map);
+});
+         route.addTo(layers[point.Group]);
        }
       }
       
