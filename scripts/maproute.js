@@ -178,6 +178,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
   map.fitBounds(e.target.getBounds());
            pointsLegend.addOverlay(route,route.get_name());
        }).addTo(map);
+       }
       }
       
       
