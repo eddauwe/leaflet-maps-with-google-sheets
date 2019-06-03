@@ -144,7 +144,7 @@ $(window).on('load', function() {
       }
       
     }
-  }
+  
     // add lines to map
     function mapLines(lines){
       for (var i in lines) {
