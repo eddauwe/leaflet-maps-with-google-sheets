@@ -168,7 +168,14 @@ new L.GPX(gpx, {async: true,polyline_options: {
       else
       {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
        if (layers !== undefined && layers.length !== 0) {
-         route=new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+         route=new L.GPX(gpx, {async: true,marker_options:{wptIcons:{'Coffee shop':
+                               L.AwesomeMarkers.icon({
+      icon: "coffee",
+      prefix: "fa",
+      markerColor: "blue",
+      iconColor: "white"
+         })}};
+                              }).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
 });
          route.addTo(layers[point.Group]);
