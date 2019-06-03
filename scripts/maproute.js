@@ -105,7 +105,7 @@ $(window).on('load', function() {
 new L.GPX(gpx, {async: true,polyline_options: {
     color: 'green',
     opacity: 0.75,
-    weight: 3,
+    weight: 30,
     lineCap: 'round'
   }}).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
