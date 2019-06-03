@@ -172,7 +172,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
                                marker_options: {
     startIconUrl: 'images/start.png',
     endIconUrl: 'images/finish-flag.png',                                 
-    //shadowUrl: 'images/pin-shadow.png',
+    shadowUrl: 'images/location-pin.png',
     wptIconUrls: {'':'images/location-pin.png'}
   }
                               }).on('loaded', function(e) {
