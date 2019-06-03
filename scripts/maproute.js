@@ -166,7 +166,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       
       //gpx lijnen
       else
-      {var gpx = point['Source']; //line['Location'] URL to your GPX file or the GPX itself
+      {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
        if (layers !== undefined && layers.length !== 0) {
          new L.GPX(gpx, {async: true,polyline_options: {
     color: 'green',
