@@ -101,7 +101,7 @@ $(window).on('load', function() {
     function mapLines(lines){
       for (var i in lines) {
         var line=lines[i];        
-          var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
+          var gpx = line['Location']; //line['Location'] URL to your GPX file or the GPX itself
 new L.GPX(gpx, {async: true,polyline_options: {
     color: 'green',
     opacity: 0.75,
