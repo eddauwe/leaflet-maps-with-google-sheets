@@ -102,7 +102,12 @@ $(window).on('load', function() {
       for (var i in lines) {
         var line=lines[i];        
           var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
-new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+new L.GPX(gpx, {async: true,polyline_options: {
+    color: 'green',
+    opacity: 0.75,
+    weight: 3,
+    lineCap: 'round'
+  }}).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
 }).addTo(map);
           
