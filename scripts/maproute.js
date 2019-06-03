@@ -144,7 +144,7 @@ $(window).on('load', function() {
       }
       
     }
-    
+  }
     // add lines to map
     function mapLines(lines){
       for (var i in lines) {
@@ -156,7 +156,7 @@ new L.GPX(gpx, {async: true}).on('loaded', function(e) {
           
         }
       }
-    }
+    
 
     var group = L.featureGroup(markerArray);
     map.fitBounds(group.getBounds());
