@@ -168,16 +168,16 @@ new L.GPX(gpx, {async: true,polyline_options: {
       else
       {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
        if (layers !== undefined && layers.length !== 0) {
-         route=new L.GPX(gpx, {async: true,polyline_options: {
+         new L.GPX(gpx, {async: true,polyline_options: {
     color: 'green',
     opacity: 0.75,
     weight: 30,
     lineCap: 'round'
   }}).on('loaded', function(e) {
+           var route=e.target;
   map.fitBounds(e.target.getBounds());
-});
-         route.addTo(layers[point.Group]);
-       }
+           pointsLegend.addOverlay(route,route.get_name());
+       }).addTo(map);
       }
       
       
