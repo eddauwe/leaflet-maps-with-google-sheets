@@ -95,7 +95,20 @@ $(window).on('load', function() {
     }
     return layers;
   }
-
+  
+  
+      // add lines to map
+    function mapLines(lines){
+      for (var i in lines) {
+        var line=lines[i];        
+          var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
+new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
+          
+        }
+      }
+  
   /**
    * Assigns points to appropriate layers and clusters them if needed
    */
@@ -145,17 +158,7 @@ $(window).on('load', function() {
       
     }
   
-    // add lines to map
-    function mapLines(lines){
-      for (var i in lines) {
-        var line=lines[i];        
-          var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
-new L.GPX(gpx, {async: true}).on('loaded', function(e) {
-  map.fitBounds(e.target.getBounds());
-}).addTo(map);
-          
-        }
-      }
+
     
 
     var group = L.featureGroup(markerArray);
