@@ -725,7 +725,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       }
 
       // Update search viewbox coordinates every time the map moves
-      map.on('moveend', updateGeocoderBounds);
+      //map.on('moveend', updateGeocoderBounds);
     }
 
     // Add location control
