@@ -181,7 +181,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
     
 
     var group = L.featureGroup(markerArray);
-    map.fitBounds(group.getBounds());
     var clusters = (getSetting('_markercluster') === 'on') ? true : false;
 
     // if layers.length === 0, add points to map instead of layer
