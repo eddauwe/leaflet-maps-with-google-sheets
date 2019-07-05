@@ -705,14 +705,15 @@ new L.GPX(gpx, {async: true,polyline_options: {
     // Add Nominatim Search control
     if (getSetting('_mapSearch') !== 'off') {
       var geocoder = L.Control.geocoder({
-        expand: 'click',
+        expand: 'touch',
+        placeholder:'Zoek...',
         position: getSetting('_mapSearch'),
         geocoder: new L.Control.Geocoder.Nominatim({
           geocodingQueryParams: {
             viewbox: [],  // by default, viewbox is empty
             bounded: 0,
           }
-        }),
+        }),showResultIcons:false
       }).addTo(map);
 
       function updateGeocoderBounds() {
