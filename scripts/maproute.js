@@ -684,7 +684,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       completePoints = true;
     }   
 
-    //centerAndZoomMap(group);
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
