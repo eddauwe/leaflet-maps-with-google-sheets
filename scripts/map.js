@@ -95,7 +95,25 @@ $(window).on('load', function() {
     }
     return layers;
   }
-
+  
+  
+      // add lines to map
+    function mapLines(lines){
+      for (var i in lines) {
+        var line=lines[i];        
+          var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
+new L.GPX(gpx, {async: true,polyline_options: {
+    color: 'green',
+    opacity: 0.75,
+    weight: 30,
+    lineCap: 'round'
+  }}).on('loaded', function(e) {
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
+          
+        }
+      }
+  
   /**
    * Assigns points to appropriate layers and clusters them if needed
    */
@@ -129,7 +147,10 @@ $(window).on('load', function() {
                            
     
       }}
-                           
+      
+      
+      
+      //punten                     
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
@@ -142,10 +163,24 @@ $(window).on('load', function() {
 
         markerArray.push(marker);
       }
+      
+      //gpx lijnen
+      else
+      {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
+       if (layers !== undefined && layers.length !== 0) {
+         route=new L.GPX(gpx, {async: true,
+                              });
+         route.addTo(layers[point.Group]);
+       }
+      }
+      
+      
     }
+  
+
+    
 
     var group = L.featureGroup(markerArray);
-    map.fitBounds(group.getBounds());
     var clusters = (getSetting('_markercluster') === 'on') ? true : false;
 
     // if layers.length === 0, add points to map instead of layer
@@ -606,8 +641,7 @@ $(window).on('load', function() {
   
   /*add point markers to the map*/
 // Add point markers to the map
-  /*function onPointDataLoad(){
-    console.log("aparte functie onpointdataload");
+  function onPointDataLoad(){
     var points = pointData.sheets(constants.pointsSheetName);
     var icons=pointData.sheets(constants.iconsSheetName);
     var layers;
@@ -615,15 +649,15 @@ $(window).on('load', function() {
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
       //group = mapPoints(points.elements,icons.elements,layers);
-      completePoints=true;
+    } else {
+      completePoints = true;
     }
-    console.log(points);
     //centerAndZoomMap(group);
-  }*/
+  }
   /**
    * Here all data processing from the spreadsheet happens
    */
-  function onMapDataLoad() {    
+  function onMapDataLoad() {
     var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
 
@@ -637,7 +671,7 @@ $(window).on('load', function() {
 
     document.title = getSetting('_mapTitle');
     addBaseMap();
-    console.log("pointdata load binnen functie onmapdataload");
+
     // Add point markers to the map
     var points = mapData.sheets(constants.pointsSheetName);
     var icons=mapData.sheets(constants.iconsSheetName);
@@ -646,13 +680,11 @@ $(window).on('load', function() {
     if (points && points.elements.length > 0) {
       layers = determineLayers(points.elements,icons.elements);
       group = mapPoints(points.elements,icons.elements,layers);
-      completePoints=true
     } else {
-      completePoints = false;
-    }
-    console.log(points);
+      completePoints = true;
+    }   
 
-    //centerAndZoomMap(group);
+    centerAndZoomMap(group);
 
     // Add polylines
     var polylines = mapData.sheets(constants.polylinesSheetName);
@@ -672,14 +704,15 @@ $(window).on('load', function() {
     // Add Nominatim Search control
     if (getSetting('_mapSearch') !== 'off') {
       var geocoder = L.Control.geocoder({
-        expand: 'click',
+        expand: 'touch',
+        placeholder:'Zoek...',
         position: getSetting('_mapSearch'),
         geocoder: new L.Control.Geocoder.Nominatim({
           geocodingQueryParams: {
             viewbox: [],  // by default, viewbox is empty
             bounded: 0,
           }
-        }),
+        }),showResultIcons:false
       }).addTo(map);
 
       function updateGeocoderBounds() {
@@ -692,7 +725,7 @@ $(window).on('load', function() {
       }
 
       // Update search viewbox coordinates every time the map moves
-      map.on('moveend', updateGeocoderBounds);
+      //map.on('moveend', updateGeocoderBounds);
     }
 
     // Add location control
@@ -729,10 +762,10 @@ $(window).on('load', function() {
     });
 
     // When all processing is done, hide the loader and make the map visible
-     showMap();
+    showMap();
 
     function showMap() {
-      if (completePoints) {
+      if (completePoints && completePolylines) {
         $('.ladder h6').append('<span class="legend-arrow"><i class="fa fa-chevron-down"></i></span>');
         $('.ladder h6').addClass('minimize');
 
@@ -945,9 +978,17 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    var watercolorlayer=L.tileLayer.provider('Stamen.Watercolor', {
+    var basemaplijst=basemap.split(',');
+    var basemaps={};
+    for (i=0;i<basemaplijst.length;i++){
+      var basemapinst=L.tileLayer.provider(basemaplijst[i], {
       maxZoom: 18
     });
+      basemapinst.addTo(map);
+      basemaps[basemaplijst[i]]=basemapinst;
+    };
+  
+    
     var mapbox=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -957,9 +998,8 @@ $(window).on('load', function() {
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
-    watercolorlayer.addTo(map);
     mapbox.addTo(map);
-    var basemaps={"Watercolor layer":watercolorlayer,"Mapbox layer":mapbox};
+    basemaps["Mapbox layer"]=mapbox;
     L.control.layers(basemaps).addTo(map);
   }
 
@@ -1004,34 +1044,6 @@ $(window).on('load', function() {
    var pointData;
   
   
-  /*load point data from other spreadsheet*/
-  /*$.ajax({
-       url:'csv/Options.csv',
-       type:'HEAD',
-       error: function() {
-         // Options.csv does not exist, so use Tabletop to fetch data from
-         // the Google sheet
-         pointData = Tabletop.init({
-           key: googleDocURLpoints,
-           callback: function(data, pointData) { onPointDataLoad(); }
-         });
-       },
-       success: function() {
-         // Get all data from .csv files
-         pointData = Procsv;
-         pointData.load({
-           self: pointData,
-           tabs: ['Points','TypeIcons'],
-           callback: onPointDataLoad
-         });
-       }
-   });*/
-  
-  
-  
-  
-  
-  
   $.ajax({
        url:'csv/Options.csv',
        type:'HEAD',
@@ -1039,7 +1051,7 @@ $(window).on('load', function() {
          // Options.csv does not exist, so use Tabletop to fetch data from
          // the Google sheet
          mapData = Tabletop.init({
-           key: googleDocURLpoints,
+           key: googleDocURLreceptie,
            callback: function(data, mapData) { onMapDataLoad(); }
          });
        },
@@ -1064,11 +1076,6 @@ $(window).on('load', function() {
       documentSettings[setting.Setting] = setting.Customize;
     }
   }
-
-   
-  
-  
-  
   
   
   
