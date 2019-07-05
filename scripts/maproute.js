@@ -980,7 +980,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
     var basemaplijst=basemap.split(',');
     var basemaps={};
-    for (i=0,i<basemaplijst.length,i++){
+    for (i=0;i<basemaplijst.length;i++){
       var basemapinst=L.tileLayer.provider(basemaplijst[i], {
       maxZoom: 18
     });
