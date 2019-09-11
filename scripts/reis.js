@@ -48,13 +48,13 @@ $(window).on('load', function() {
       zoomSet = true;
     }
 
-    if ((latSet && lonSet) || !points) {
+    if (!points) {
       center = L.latLng(lat, lon);
     } else {
       center = points.getBounds().getCenter();
     }
 
-    if (!zoomSet && points) {
+    if (points) {
       zoom = map.getBoundsZoom(points.getBounds());
     }
 
