@@ -1051,7 +1051,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
          // Options.csv does not exist, so use Tabletop to fetch data from
          // the Google sheet
          mapData = Tabletop.init({
-           key: googleDocURLoekraine,
+           key: googleDocURL,
            callback: function(data, mapData) { onMapDataLoad(); }
          });
        },
