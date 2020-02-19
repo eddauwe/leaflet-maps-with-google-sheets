@@ -7,6 +7,7 @@ Customize Leaflet maps with a linked Google Sheets template and GeoJSON data on 
 - Leaflet Map trouwfeest https://edwaz56.github.io/leaflet-maps-with-google-sheets/
 - Leaflet Map trouwreceptie https://edwaz56.github.io/leaflet-maps-with-google-sheets/index2.html
 - Leaflet Map moezelreis https://edwaz56.github.io/leaflet-maps-with-google-sheets/moezelreis.html
+- Leaflet Map volgende reis https://edwaz56.github.io/leaflet-maps-with-google-sheets/reis.html
 - Google Sheets template https://docs.google.com/spreadsheets/d/1avIZpx5j8_Eu4_8_7sFm03Hg8Xi_mFSiZ_T6hSmuVXc/edit#gid=164271551
 
 ## Create your own
