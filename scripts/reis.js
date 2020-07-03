@@ -988,25 +988,22 @@ new L.GPX(gpx, {async: true,polyline_options: {
       basemaps[basemaplijst[i]]=basemapinst;
     };
   
-    
-    var mapbox=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoiZWRkYXV3ZSIsImEiOiJjaXhyaXkzaTAwMDJpMzNwYm9kNzBqdmZ2In0.xJLYRTqLMrWllResz6DxxQ'
-});
-    
+   
+    var HikeBike_HikeBike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	});
     
     var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	maxZoom: 17,
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-});
+	});
     
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
-    basemaps["Mapbox layer"]=mapbox;
     basemaps["OpenTopoMap"]=OpenTopoMap;
+    basemaps["HikeBike"]=HikeBike_HikeBike;
     L.control.layers(basemaps).addTo(map);
   }
   
