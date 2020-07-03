@@ -171,7 +171,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
        if (layers !== undefined && layers.length !== 0) {
          route=new L.GPX(gpx, {async: true,marker_options: {
     endIconUrl: 'images/finish-flag.png',
-		 wptIcons:'images/finish-flag.png'
+		 wptIcons:'images/location-pin.png'
 		 
   }
                               });
