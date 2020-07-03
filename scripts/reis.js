@@ -170,12 +170,8 @@ new L.GPX(gpx, {async: true,polyline_options: {
 	var iconel = icons["Route"]
        if (layers !== undefined && layers.length !== 0) {
          route=new L.GPX(gpx, {async: true,marker_options: {
-    endIconUrl: 'images/finish-flag.png',
-		 wptIcons: {
-		createMarkerIcon(iconel['Marker Icon'],
-          'fa',
-          iconel['Marker Color'].toLowerCase(),
-          iconel['Icon Color'])}
+    endIconUrl: 'images/finish-flag.png'
+		 
   }
                               });
          route.addTo(layers[point.Group]);
