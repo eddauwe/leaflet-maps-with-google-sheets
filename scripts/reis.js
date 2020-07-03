@@ -167,7 +167,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
       //gpx lijnen
       else
       {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
-       var icons=pointData.sheets(constants.iconsSheetName);
 	var iconel = icons["Route"]
        if (layers !== undefined && layers.length !== 0) {
          route=new L.GPX(gpx, {async: true,marker_options: {
