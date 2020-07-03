@@ -174,7 +174,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
 		 wptIcons:'':createMarkerIcon(iconel['Marker Icon'],
           'fa',
           iconel['Marker Color'].toLowerCase(),
-          iconel['Icon Color'])
+          iconel['Icon Color']);
 		 
   }
                               });
