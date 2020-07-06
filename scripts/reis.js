@@ -1014,7 +1014,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
 });
 	  
 	  
-  var oa_summer = oam.api.tilelayer(L, 'oa_map');
     
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
