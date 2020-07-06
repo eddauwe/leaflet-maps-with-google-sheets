@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gpx version="1.1" creator=" - " xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<metadata>
+		<name><![CDATA[Geowanderung G10 - Himmerich]]></name>
+		<desc><![CDATA[Der Himmerich liegt etwa vier Kilometer östlich des Rheins zwischen der Stadt Bad Honnef und deren Ortsteil Himberg. Rund 35 Meter unterhalb des Gipfels befindet sich an der Südwestseite ein Plateau, von dem man einen guten Blick über ganz Bad Honnef, die Löwenburg, den Drachenfels und einige kleinere Berge des Siebengebirges hat. Dieses Plateau und die zum Gipfel führende Steilwand dokumentieren die ehemalige Nutzung des Himmerichs als Steinbruch zum Latitabbau.
+
+Der Latit ist ein vulkanisches Ergussgestein, das nach der mittelitalienischen Region Latium, einem seiner Hauptverbreitungsgebiete, benannt wurde.
+
+Bei Latit handelt es sich um das vulkanische Äquivalent zu Monzonit. Er ist verwandt mit den Andesiten. Hauptbestandteile sind Plagioklas, Sanidin und Pyroxen. Daneben enthält er noch Augit, Hornblende und Biotit. In einer feinkörnigen bis dichten Grundmasse befinden sich Einsprenglinge aus Plagioklas, Sanidin und Pyroxen. Das Mineral kommt neben Latium auch auf Stromboli, im französischen Zentralmassiv (Puy de Dôme), sowie in Deutschland - eben im Siebengebirge - vor. Das Gestein lässt sich als Baumaterial nutzen. Zahlreiche Gebäude wurden damit erbaut, darunter das heute nur mehr als Ruine vorhandene Kloster Heisterbach in Königswinter.
+
+Die Besonderheit des Ortes: Direkt auf dem Plateau des Himmerichs stand bis Anfang der 1930er Jahre ein Einkehrhaus mit einem Souvenirbüdchen. Diese Waldgaststätte wurde vom Naturfreunde e.V. betrieben und war bis nach Holland bekannt. Ein Brand, vermutlich politisch motiviert, hat diese Gaststätte zerstört und sie wurde nicht wieder aufgebaut. Noch heute kann man in der Halde Tassen und Überbleibsel dieses Einkehrhauses finden.
+ Die Steine wurden mit einer sogenannten Bremsbahn, also einer Drahtseilbahn, ins Tal transportiert. Im Mucherwiesental gab es eine kleine Talstation, an der das Gestein umgeladen und an den Rhein geschafft wurde.
+
+Infostelle: Goldfuß-Museum im Steinmann-Institut
+ für Geologie, Mineralogie und Paläontologie
+ Nußallee 8; 53115 Bonn
+ Fon: 0228.733103
+ Internet: www.paleontology.uni-bonn.de
+ Achtung: Öffnungszeiten beachten]]></desc>
+		<author>
+			<name><![CDATA[]]></name>
+		</author>
+		<copyright author="">
+			<year>2020</year>
+		</copyright>
+		<link href="">
+		<text><![CDATA[Startseite des ]]></text>
+		<type>text/html</type>
+		</link>
+		<time>2020-07-06T23:30:54+02:00</time>
+		<bounds minlat="7.2405" minlon="50.6386" maxlat="7.2802" maxlon="50.6523"/>
+	</metadata>
+	<trk>
+		<name><![CDATA[Geowanderung G10 - Himmerich]]></name>
+		<desc><![CDATA[]]></desc>
+		<src>Freizeitplaner 2010</src>
+		<link href="/freizeitplaner2010/roi-details/1178/geowanderung-g10-himmerich/roi-download/gpx/index.html">
+		<text><![CDATA[HTML-Version der Route online]]></text>
+		<type>text/html</type>
+		</link>
+		<link href="/freizeitplaner2010/roi-details/1178/geowanderung-g10-himmerich/roi-download/gpx/index.html">
+		<text><![CDATA[GPX-Version der Route online]]></text>
+		<type>text/xml</type>
+		</link>
+		<number>1</number>
+		<trkseg>
+			
+			<trkpt lat="50.6391" lon="7.2426">
+				
+				<name><![CDATA[]]></name>
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.639" lon="7.243">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.639" lon="7.2432">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.639" lon="7.2435">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6389" lon="7.2438">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6388" lon="7.2441">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6386" lon="7.2446">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6387" lon="7.245">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6388" lon="7.2455">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6389" lon="7.2457">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6389" lon="7.2459">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6392" lon="7.2459">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6394" lon="7.246">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6397" lon="7.2463">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6399" lon="7.2464">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.64" lon="7.2469">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6401" lon="7.2472">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6402" lon="7.2478">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6404" lon="7.2483">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6405" lon="7.2485">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6406" lon="7.2493">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6407" lon="7.2496">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6408" lon="7.2499">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.641" lon="7.2501">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6408" lon="7.2504">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6407" lon="7.2515">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6407" lon="7.2526">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6406" lon="7.2536">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6406" lon="7.2544">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6407" lon="7.2551">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6406" lon="7.2563">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6406" lon="7.2574">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6405" lon="7.258">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6405" lon="7.2614">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6407" lon="7.262">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.641" lon="7.262">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6413" lon="7.2619">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6412" lon="7.2623">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6413" lon="7.2624">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6413" lon="7.2627">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6415" lon="7.2631">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6415" lon="7.2635">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6417" lon="7.264">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6418" lon="7.2651">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6419" lon="7.2659">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6421" lon="7.2664">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6424" lon="7.2683">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6426" lon="7.2693">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6421" lon="7.2696">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6419" lon="7.2704">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6416" lon="7.2714">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6412" lon="7.2723">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.641" lon="7.273">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6406" lon="7.275">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.64" lon="7.2756">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6397" lon="7.2765">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6396" lon="7.2787">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6397" lon="7.2792">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.64" lon="7.2797">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.64" lon="7.2801">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6403" lon="7.2802">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6409" lon="7.2793">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6412" lon="7.2791">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6423" lon="7.2773">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6427" lon="7.2767">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6437" lon="7.2752">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6438" lon="7.2752">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6439" lon="7.2754">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6441" lon="7.2759">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6444" lon="7.2763">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6451" lon="7.2767">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6455" lon="7.2769">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6457" lon="7.2768">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.646" lon="7.2766">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6462" lon="7.2765">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6463" lon="7.2764">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6463" lon="7.2763">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6465" lon="7.2761">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6466" lon="7.2759">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6468" lon="7.2755">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6472" lon="7.2748">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6475" lon="7.2736">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6479" lon="7.2722">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6481" lon="7.2708">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6481" lon="7.27">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6482" lon="7.2694">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6484" lon="7.2686">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6484" lon="7.267">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6483" lon="7.2665">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6481" lon="7.2661">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6481" lon="7.2653">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6482" lon="7.2631">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6484" lon="7.2627">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6484" lon="7.2629">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6488" lon="7.2631">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.649" lon="7.2635">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6497" lon="7.2639">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6504" lon="7.2637">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6508" lon="7.2637">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6516" lon="7.2634">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6518" lon="7.2628">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6518" lon="7.2621">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6516" lon="7.2615">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6516" lon="7.2608">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6517" lon="7.2603">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6521" lon="7.2599">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6523" lon="7.2595">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6523" lon="7.2592">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6521" lon="7.2585">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6518" lon="7.2577">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6515" lon="7.2576">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6512" lon="7.2573">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6511" lon="7.2571">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6511" lon="7.2571">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6508" lon="7.2569">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6507" lon="7.2567">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6506" lon="7.2563">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6506" lon="7.2561">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6506" lon="7.2559">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6509" lon="7.2558">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6511" lon="7.2554">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6512" lon="7.2552">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6512" lon="7.255">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6511" lon="7.2545">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.651" lon="7.2542">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6507" lon="7.2537">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6506" lon="7.2531">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6504" lon="7.2528">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6504" lon="7.2525">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6503" lon="7.2522">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6503" lon="7.252">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6502" lon="7.2517">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6502" lon="7.2515">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6501" lon="7.2512">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6501" lon="7.2509">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6501" lon="7.2506">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.65" lon="7.2505">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6499" lon="7.2504">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6499" lon="7.2502">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6499" lon="7.25">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6499" lon="7.2497">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6499" lon="7.2493">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6499" lon="7.2488">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6498" lon="7.2485">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6497" lon="7.2482">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6497" lon="7.2479">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6494" lon="7.2473">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6492" lon="7.2468">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6492" lon="7.2465">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6491" lon="7.2463">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6491" lon="7.2462">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.649" lon="7.246">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6487" lon="7.2456">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6487" lon="7.2455">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6485" lon="7.2454">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6483" lon="7.2454">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6481" lon="7.2454">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6478" lon="7.2452">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6476" lon="7.2452">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6475" lon="7.2453">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6473" lon="7.2452">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6471" lon="7.2452">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.647" lon="7.245">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6469" lon="7.2448">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6466" lon="7.2447">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6466" lon="7.2445">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6465" lon="7.244">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6458" lon="7.2437">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6453" lon="7.2435">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6447" lon="7.243">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6438" lon="7.2424">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6432" lon="7.2418">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6429" lon="7.2417">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6427" lon="7.2414">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6426" lon="7.2411">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6425" lon="7.2412">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6425" lon="7.2413">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6424" lon="7.2416">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6423" lon="7.242">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6422" lon="7.2421">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6421" lon="7.2423">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.642" lon="7.2425">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.642" lon="7.2427">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6421" lon="7.243">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.642" lon="7.2432">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.642" lon="7.2437">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6419" lon="7.2437">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6418" lon="7.2437">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6417" lon="7.2438">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6412" lon="7.2444">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6408" lon="7.245">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6408" lon="7.2452">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6407" lon="7.2454">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6404" lon="7.2462">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6402" lon="7.2463">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6401" lon="7.2462">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.64" lon="7.2462">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6395" lon="7.2452">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6394" lon="7.2447">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6395" lon="7.244">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6395" lon="7.2436">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6395" lon="7.2427">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6396" lon="7.2419">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6396" lon="7.2412">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6395" lon="7.2411">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6393" lon="7.2405">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6392" lon="7.2407">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6393" lon="7.2413">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6393" lon="7.2416">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6392" lon="7.242">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6391" lon="7.2424">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+			<trkpt lat="50.6391" lon="7.2426">
+				
+				<sym>Dot</sym>
+			</trkpt>
+			
+		</trkseg>
+	</trk>
+</gpx>
