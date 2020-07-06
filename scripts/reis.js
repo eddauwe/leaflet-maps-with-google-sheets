@@ -1008,9 +1008,10 @@ new L.GPX(gpx, {async: true,polyline_options: {
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 	});
 	  
-	  var Stadia_Outdoors = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
-	maxZoom: 20,
-	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+var Thunderforest_OpenCycleMap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	apikey: '<your apikey>',
+	maxZoom: 22
 });
 	  
 	  
@@ -1020,7 +1021,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     }).addTo(map);
     basemaps["OpenTopoMap"]=OpenTopoMap;
     basemaps["HikeBike"]=HikeBike_HikeBike;
-    basemaps["Outdoors"]=Stadia_Outdoors;
+    basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
     L.control.layers(basemaps).addTo(map);
   }
   
