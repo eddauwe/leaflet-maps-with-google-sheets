@@ -1008,6 +1008,11 @@ new L.GPX(gpx, {async: true,polyline_options: {
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 	});
 	  
+	  var osm = L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 18
+});
+	  
   var oa_summer = oam.api.tilelayer(L, 'oa_map');
     
     L.control.attribution({
@@ -1015,6 +1020,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     }).addTo(map);
     basemaps["OpenTopoMap"]=OpenTopoMap;
     basemaps["HikeBike"]=HikeBike_HikeBike;
+    basemaps["OpenStreetMap"]=osm;
     basemaps["Outdooractive Summer"]=oa_summer;
     L.control.layers(basemaps).addTo(map);
   }
