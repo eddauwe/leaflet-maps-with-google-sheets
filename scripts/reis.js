@@ -1008,14 +1008,14 @@ new L.GPX(gpx, {async: true,polyline_options: {
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 	});
 	  
-  var Outdooractive = L.tileLayer("//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&key=yourtest-outdoora-ctiveapi&lang=en&leaflet_gshim=1",{maxZoom:19});
+  var oa_summer = oam.api.tilelayer(L, 'oa_map');
     
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
     basemaps["OpenTopoMap"]=OpenTopoMap;
     basemaps["HikeBike"]=HikeBike_HikeBike;
-    basemaps["Outdooractive"]=Outdooractive;
+    basemaps["Outdooractive Summer"]=oa_summer;
     L.control.layers(basemaps).addTo(map);
   }
   
