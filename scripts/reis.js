@@ -176,7 +176,8 @@ new L.GPX(gpx, {async: true,polyline_options: {
           iconel['Marker Color'].toLowerCase(),
           iconel['Icon Color'])}
 		 
-  }
+  },
+			       polyline_options:{color:iconel['Marker Color'].toLowerCase()}
                               });
          route.addTo(layers[point.Group]);
        }
