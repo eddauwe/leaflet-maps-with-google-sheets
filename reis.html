@@ -77,6 +77,8 @@
       zoomControl: false,
       scrollWheelZoom: true,
     }).setView([41.76,-72.69], 11); // default center is overridden by Google Sheet options and points
+    
+    L.control.scale(position:'bottomleft').addTo(map);
   </script>
 
   <script type="text/javascript" src="google-doc-url.js"></script>
