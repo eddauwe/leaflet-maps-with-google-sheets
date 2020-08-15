@@ -12,6 +12,8 @@ Customize Leaflet maps with a linked Google Sheets template and GeoJSON data on 
 
 -Reis Alpen https://docs.google.com/spreadsheets/d/1EuOPFGHJp-hjNsiv1I7Q-2iM9LsJjQMaCD_rhZLqW-g/edit#gid=164271551
 
+-Ierland reis https://docs.google.com/spreadsheets/d/1Lykp1QpqZt8wqCzpzCCYwlL0MQOyerMwNqfatyHjoOs/edit#gid=486332968
+
 ## Create your own
 - See video with step-by-step tutorial in *Data Visualization for All* http://www.datavizforall.org/leaflet/with-google-sheets/
 
