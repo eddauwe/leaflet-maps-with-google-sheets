@@ -9,4 +9,4 @@ var googleDocURLmoezel='https://docs.google.com/spreadsheets/d/1jN0e-1Lg-_Vd_pUO
 var googleDocURLoekraine='https://docs.google.com/spreadsheets/d/1avIZpx5j8_Eu4_8_7sFm03Hg8Xi_mFSiZ_T6hSmuVXc/edit#gid=164271551';
 
 // insert your own Google Sheets API key from https://console.developers.google.com
-var googleApiKey = 'AIzaSyBh9nKnVZm2RPeZa0ywCOxPAgJJfK87WhY';
+var googleApiKey = 'AIzaSyBJJ6sOFPYo2i8mBmTugvF0DP56O9kR5LA';
