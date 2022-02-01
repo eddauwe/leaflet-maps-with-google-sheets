@@ -692,13 +692,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
 
     centerAndZoomMap(group);
 
-    // Add polylines
-    var polylines = mapData.sheets(constants.polylinesSheetName);
-    if (polylines && polylines.elements.length > 0) {
-      processPolylines(polylines.elements);
-    } else {
-      completePolylines = true;
-    }
 
     // Add polygons
     /*if (getPolygonSetting(0, '_polygonsGeojsonURL')) {
