@@ -666,8 +666,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
   /**
    * Here all data processing from the spreadsheet happens
    */
-  function onMapDataLoad() {
-    var options = mapData.sheets(constants.optionsSheetName).elements;
+  function onMapDataLoad(options, points) {
     createDocumentSettings(options);
 
     /*createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
@@ -682,13 +681,11 @@ new L.GPX(gpx, {async: true,polyline_options: {
     addBaseMap();
 
     // Add point markers to the map
-    var points = mapData.sheets(constants.pointsSheetName);
-    var icons=mapData.sheets(constants.iconsSheetName);
     var layers;
     var group = '';
-    if (points && points.elements.length > 0) {
-      layers = determineLayers(points.elements,icons.elements);
-      group = mapPoints(points.elements,icons.elements,layers);
+    if (points && points.length > 0) {
+      layers = determineLayers(points,icons);
+      group = mapPoints(points,icons,layers);
     } else {
       completePoints = true;
     }   
@@ -1069,24 +1066,92 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
   
   
   $.ajax({
-       url:'csv/Options.csv',
+       url:'./csv/Options.csv',
        type:'HEAD',
        error: function() {
-         // Options.csv does not exist, so use Tabletop to fetch data from
+         // Options.csv does not exist in the root level, so use Tabletop to fetch data from
          // the Google sheet
-         mapData = Tabletop.init({
-           key: googleDocURL,
-           callback: function(data, mapData) { onMapDataLoad(); }
-         });
+
+		 //Zoek googleApiKey in constants
+         if (typeof googleApiKey !== 'undefined' && googleApiKey) {
+
+
+		  //  <!-- PapaParse --> Voeg dit toe aan reis.html
+		//<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+          var parse = function(res) {
+            return Papa.parse(Papa.unparse(res[0].values), {header: true} ).data;
+          }
+
+          var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
+          var spreadsheetId = googleDocURL.indexOf('/d/') > 0
+            ? googleDocURL.split('/d/')[1].split('/')[0]
+            : googleDocURL
+
+          $.getJSON(
+            apiUrl + spreadsheetId + '?key=' + googleApiKey
+          ).then(function(data) {
+              var sheets = data.sheets.map(function(o) { return o.properties.title })
+
+              if (sheets.length === 0 || !sheets.includes('Options')) {
+                'Could not load data from the Google Sheet'
+              }
+
+              // First, read 2 sheets: Options and Points
+              $.when(
+                $.getJSON(apiUrl + spreadsheetId + '/values/Options?key=' + googleApiKey),
+                $.getJSON(apiUrl + spreadsheetId + '/values/Points?key=' + googleApiKey)
+              ).done(function(options, points) {
+
+
+                  // Load map once all polygon sheets have been loaded (if any)
+                    onMapDataLoad(
+                      parse(options),
+                      parse(points)
+                    )
+
+                
+              })
+              
+            }
+
+
+         } else {
+          alert('You load data from a Google Sheet, you need to add a free Google API key')
+         }
+
        },
+
+       /*
+       Loading data from CSV files.
+       */
        success: function() {
-         // Get all data from .csv files
-         mapData = Procsv;
-         mapData.load({
-           self: mapData,
-           tabs: ['Options','Polygons', 'Polylines'],
-           callback: onMapDataLoad
-         });
+
+        var parse = function(s) {
+          return Papa.parse(s[0], {header: true}).data
+        }
+      
+        $.when(
+          $.get('./csv/Options.csv'),
+          $.get('./csv/Points.csv'),
+          $.get('./csv/Polylines.csv')
+        ).done(function(options, points, polylines) {
+      
+          function loadPolygonCsv(n) {
+      
+            $.get('./csv/Polygons' + (n === 0 ? '' : n) + '.csv', function(data) {
+              createPolygonSettings( parse([data]) )
+              loadPolygonCsv(n+1)
+            }).fail(function() { 
+              // No more sheets to load, initialize the map  
+              onMapDataLoad( parse(options), parse(points), parse(polylines) )
+            })
+      
+          }
+      
+          loadPolygonCsv(0)
+      
+        })
+
        }
    });
 
