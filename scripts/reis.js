@@ -1093,7 +1093,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
               $.when(
                 $.getJSON(apiUrl + spreadsheetId + '/values/Options?key=' + googleApiKey),
                 $.getJSON(apiUrl + spreadsheetId + '/values/Points?key=' + googleApiKey),
-		$.getJSON(apiUrl + spreadsheetId + '/values/Icons?key=' + googleApiKey)      
+		$.getJSON(apiUrl + spreadsheetId + '/values/TypeIcons?key=' + googleApiKey)      
               ).done(function(options, points,icons) {
 
 
