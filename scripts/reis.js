@@ -1037,7 +1037,7 @@ $(window).on('load', function() {
                     onMapDataLoad(
                       parse(options),
                       parse(points),
-                      parse(polylines)
+                      parse(icons)
                     )
 
               })
