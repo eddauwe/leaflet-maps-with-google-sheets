@@ -1089,17 +1089,19 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
                 'Could not load data from the Google Sheet'
               }
 
-              // First, read 2 sheets: Options and Points
+              // First, read 3 sheets: Options, Points and Icons
               $.when(
                 $.getJSON(apiUrl + spreadsheetId + '/values/Options?key=' + googleApiKey),
-                $.getJSON(apiUrl + spreadsheetId + '/values/Points?key=' + googleApiKey)
-              ).done(function(options, points) {
+                $.getJSON(apiUrl + spreadsheetId + '/values/Points?key=' + googleApiKey),
+		$.getJSON(apiUrl + spreadsheetId + '/values/Icons?key=' + googleApiKey)      
+              ).done(function(options, points,icons) {
 
 
                   // Load map once all polygon sheets have been loaded (if any)
                     onMapDataLoad(
                       parse(options),
-                      parse(points)
+                      parse(points),
+		      parse(icons)
                     )
 
                 
