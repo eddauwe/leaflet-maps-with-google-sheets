@@ -666,7 +666,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
   /**
    * Here all data processing from the spreadsheet happens
    */
-  function onMapDataLoad(options, points) {
+  function onMapDataLoad(options, points, icons) {
     createDocumentSettings(options);
 
     /*createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
