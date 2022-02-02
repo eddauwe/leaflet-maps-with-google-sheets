@@ -331,7 +331,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
   allTextLabels = [];
 
   function loadAllGeojsons(p) {
-    if (p < polygonSettings.length && getPolygonSetting(p, '_polygonsGeojsonURL')) {
+    if (p < polygonSettings.length && getPolygonSetting(p, '_polygonsGeojsonURL').trim()) {
       // Pre-process popup properties to be used in onEachFeature below
       polygon = p;
       var popupProperties = getPolygonSetting(p, '_popupProp').split(';');
@@ -339,7 +339,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       allPopupProperties.push(popupProperties);
 
       // Load geojson
-      $.getJSON(getPolygonSetting(p, '_polygonsGeojsonURL'), function(data) {
+      $.getJSON(getPolygonSetting(p, '_polygonsGeojsonURL').trim(), function(data) {
           geoJsonLayer = L.geoJson(data, {
             onEachFeature: onEachFeature,
             pointToLayer: function(feature, latlng) {
@@ -359,7 +359,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
   function processAllPolygons() {
     var p = 0;  // polygon sheet
 
-    while (p < polygonSettings.length && getPolygonSetting(p, '_polygonsGeojsonURL')) {
+    while (p < polygonSettings.length && getPolygonSetting(p, '_polygonsGeojsonURL').trim()) {
       isNumerical = [];
       divisors = [];
       colors = [];
@@ -456,7 +456,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     }
 
     // Generate polygon labels layers
-    for (i in allTextLabels) {
+    for (var i in allTextLabels) {
       var g = L.featureGroup(allTextLabels[i]);
       allTextLabelsLayers.push(g);
     }
@@ -520,11 +520,11 @@ new L.GPX(gpx, {async: true,polyline_options: {
     var from, to, isNum, color;
 
     for (var i = 0; i < allDivisors[p][z].length; i++) {
-      isNum = allIsNumerical[p][z];
-      from = allDivisors[p][z][i];
-      to = allDivisors[p][z][i+1];
+      var isNum = allIsNumerical[p][z];
+      var from = allDivisors[p][z][i];
+      var to = allDivisors[p][z][i+1];
 
-      color = getColor(from);
+      var color = getColor(from);
       from = from ? comma(from) : from;
       to = to ? comma(to) : to;
 
@@ -625,7 +625,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     layer.bindPopup(info);
 
     // Add polygon label if needed
-    if (getPolygonSetting(polygon, '_polygonLabel') != '') {
+    if (getPolygonSetting(polygon, '_polygonLabel') !== '') {
       var myTextLabel = L.marker(polylabel(layer.feature.geometry.coordinates, 1.0).reverse(), {
         icon: L.divIcon({
           className: 'polygon-label' + polygon + ' polygon-label',
@@ -633,7 +633,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
         })
       });
 
-      if (!allTextLabels[polygon]) {allTextLabels.push([]);}
       allTextLabels[polygon].push(myTextLabel);
     }
   }
@@ -806,6 +805,19 @@ new L.GPX(gpx, {async: true,polyline_options: {
         setTimeout(showMap, 50);
       }
     }
+	// Add Google Analytics if the ID exists
+    var ga = getSetting('_googleAnalytics');
+    console.log(ga)
+    if ( ga && ga.length >= 10 ) {
+      var gaScript = document.createElement('script');
+      gaScript.setAttribute('src','https://www.googletagmanager.com/gtag/js?id=' + ga);
+      document.head.appendChild(gaScript);
+  
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ga);
+    }																	  			 
   }
 
   /**
@@ -1030,7 +1042,9 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
    * getSetting(s) is equivalent to documentSettings[constants.s]
    */
   function getPolygonSetting(p, s) {
+	if (polygonSettings[p]) {						 
     return polygonSettings[p][constants[s]];
+	return false; 
   }
 
   /**
@@ -1169,7 +1183,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
    * {"webpageTitle": "Leaflet Boilerplate", "infoPopupText": "Stuff"}
    */
   function createPolygonSettings(settings) {
-    p = {};
+    var p = {};
     for (var i in settings) {
       var setting = settings[i];
       p[setting.Setting] = setting.Customize;
