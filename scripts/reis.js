@@ -132,7 +132,7 @@ $(window).on('load', function() {
           iconel['Icon Color']
         );
 	  }}
-      if (point.Latitude !== '' && point.Longitude !== '') {
+      if (point.Latitude !== undefined && point.Longitude !== undefined) {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
