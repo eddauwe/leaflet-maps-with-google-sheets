@@ -1046,7 +1046,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
     return polygonSettings[p][constants[s]];
 	return false; 
   }
-
+  }
   /**
    * Returns the value of setting named s from constants.js
    * or def if setting is either not set or does not exist
