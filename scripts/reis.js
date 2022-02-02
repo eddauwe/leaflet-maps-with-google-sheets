@@ -1,9 +1,8 @@
 $(window).on('load', function() {
   var documentSettings = {};
-  var markerColors = [];
+  var group2color = {};
 
   var polygonSettings = [];
-  var polygonSheets = 1;
   var polygonsLegend;
 
   var completePoints = false;
@@ -48,13 +47,13 @@ $(window).on('load', function() {
       zoomSet = true;
     }
 
-    if (!points) {
+    if ((latSet && lonSet) || !points) {
       center = L.latLng(lat, lon);
     } else {
       center = points.getBounds().getCenter();
     }
 
-    if (points) {
+    if (!zoomSet && points) {
       zoom = map.getBoundsZoom(points.getBounds());
     }
 
@@ -67,53 +66,35 @@ $(window).on('load', function() {
    * column in the spreadsheet.
    */
   function determineLayers(points,icons) {
-    var layerNamesFromSpreadsheet = [];
+    var groups = [];
     var layers = {};
+
     for (var i in points) {
-      var pointLayerNameFromSpreadsheet = points[i].Group;
-      if (layerNamesFromSpreadsheet.indexOf(pointLayerNameFromSpreadsheet) === -1) {
-        for (e in icons){iconel=icons[e];
-          if (iconel['Group']==points[i].Group){
-        markerColors.push(
-          iconel['Marker Icon'].indexOf('.') > 0
-          ? iconel['Marker Icon']
-          : iconel['Marker Color']
-        )}};
-        layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
+      var group = points[i].Group;
+      if (group && groups.indexOf(group) === -1) {
+        // Add group to groups
+        groups.push(group);
+
+        // Add color to the crosswalk
+        group2color[ group ] = points[i]['Marker Icon'].indexOf('.') > 0
+          ? points[i]['Marker Icon']
+          : points[i]['Marker Color'];
       }
     }
 
     // if none of the points have named layers, return no layers
-    if (layerNamesFromSpreadsheet.length === 0) {
+    if (groups.length === 0) {
       layers = undefined;
     } else {
-      for (var i in layerNamesFromSpreadsheet) {
-        var layerNameFromSpreadsheet = layerNamesFromSpreadsheet[i];
-        layers[layerNameFromSpreadsheet] = L.layerGroup();
-        layers[layerNameFromSpreadsheet].addTo(map);
+      for (var i in groups) {
+        var name = groups[i];
+        layers[name] = L.layerGroup();
+        layers[name].addTo(map);
       }
     }
     return layers;
   }
-  
-  
-      // add lines to map
-    function mapLines(lines){
-      for (var i in lines) {
-        var line=lines[i];        
-          var gpx = line['Source']; //line['Location'] URL to your GPX file or the GPX itself
-new L.GPX(gpx, {async: true,polyline_options: {
-    color: 'green',
-    opacity: 0.75,
-    weight: 30,
-    lineCap: 'round'
-  }}).on('loaded', function(e) {
-  map.fitBounds(e.target.getBounds());
-}).addTo(map);
-          
-        }
-      }
-  
+
   /**
    * Assigns points to appropriate layers and clusters them if needed
    */
@@ -122,18 +103,18 @@ new L.GPX(gpx, {async: true,polyline_options: {
     // check that map has loaded before adding points to it?
     for (var i in points) {
       var point = points[i];
-      for (var e in icons) {var iconel = icons[e];
+	  for (var e in icons) {var iconel = icons[e];
       if (iconel['Group']==point['Group'])
-      {
+	  {								  
       // If icon contains '.', assume it's a path to a custom icon,
       // otherwise create a Font Awesome icon
       var iconSize = iconel['Custom Size'];
       var size = (iconSize.indexOf('x') > 0)
-      ? [parseInt(iconSize.split('x')[0]), parseInt(iconSize.split('x')[1])]
-      : [32, 32];
+        ? [parseInt(iconSize.split('x')[0]), parseInt(iconSize.split('x')[1])]
+        : [32, 32];
 
       var anchor = [size[0] / 2, size[1]];
-      
+
       var icon = (iconel['Marker Icon'].indexOf('.') > 0)
         ? L.icon({
           iconUrl: iconel['Marker Icon'],
@@ -143,15 +124,10 @@ new L.GPX(gpx, {async: true,polyline_options: {
         : createMarkerIcon(iconel['Marker Icon'],
           'fa',
           iconel['Marker Color'].toLowerCase(),
-          iconel['Icon Color']);
-                           
-    
-      }}
-      
-      
-      
-      //punten                     
-      if (point.Latitude !== undefined && point.Longitude !== undefined) {
+          iconel['Icon Color']
+        );
+
+      if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
@@ -163,10 +139,9 @@ new L.GPX(gpx, {async: true,polyline_options: {
 
         markerArray.push(marker);
       }
-      
-      //gpx lijnen
-      else
-      {var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
+	  //gpx lijnen
+	  /*else
+		{var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
 	var iconel = icons[3]
        if (layers !== undefined && layers.length !== 0) {
          route=new L.GPX(gpx, {async: true,marker_options: {
@@ -181,13 +156,8 @@ new L.GPX(gpx, {async: true,polyline_options: {
                               });
          route.addTo(layers[point.Group]);
        }
-      }
-      
-      
+      }		*/  
     }
-  
-
-    
 
     var group = L.featureGroup(markerArray);
     var clusters = (getSetting('_markercluster') === 'on') ? true : false;
@@ -221,7 +191,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
       });
 
       if (getSetting('_pointsLegendPos') !== 'off') {
-        //console.log(pointsLegend)
         pointsLegend.addTo(map);
         pointsLegend._container.id = 'points-legend';
         pointsLegend._container.className += ' ladder';
@@ -230,7 +199,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
 
     $('#points-legend').prepend('<h6 class="pointer">' + getSetting('_pointsLegendTitle') + '</h6>');
     if (getSetting('_pointsLegendIcon') != '') {
-      $('#points-legend h6').prepend('<span class="legend-icon"><i class="fa '
+      $('#points-legend h6').prepend('<span class="legend-icon"><i class="fas '
         + getSetting('_pointsLegendIcon') + '"></i></span>');
     }
 
@@ -510,7 +479,9 @@ new L.GPX(gpx, {async: true,polyline_options: {
     // If no scale exists: hide the legend. Ugly temporary fix.
     // Can't use 'hide' because it is later toggled
     if (allDivisors[p][z] == '') {
-      $('.polygons-legend' + p).find('.polygons-legend-scale').css({'margin': '0px', 'padding': '0px', 'border': '0px solid'});
+      $('.polygons-legend' + p).find('.polygons-legend-scale').css(
+        {'margin': '0px', 'padding': '0px', 'border': '0px solid'}
+      );
       return;
     }
 
@@ -545,8 +516,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
    */
   function polygonStyle(feature) {
     var value = feature.properties[allPolygonLayers[polygon][layer][0].trim()];
-
-    var style = {};
 
     if (feature.geometry.type == 'Point') {
       return {  // Point style
@@ -624,7 +593,10 @@ new L.GPX(gpx, {async: true,polyline_options: {
 
     layer.bindPopup(info);
 
+    
     // Add polygon label if needed
+    if (!allTextLabels[polygon]) { allTextLabels.push([]) }
+
     if (getPolygonSetting(polygon, '_polygonLabel') !== '') {
       var myTextLabel = L.marker(polylabel(layer.feature.geometry.coordinates, 1.0).reverse(), {
         icon: L.divIcon({
@@ -632,7 +604,6 @@ new L.GPX(gpx, {async: true,polyline_options: {
           html: feature.properties[getPolygonSetting(polygon, '_polygonLabel')],
         })
       });
-
       allTextLabels[polygon].push(myTextLabel);
     }
   }
@@ -646,36 +617,13 @@ new L.GPX(gpx, {async: true,polyline_options: {
       $(this).click().click();
     });
   }
-  
-  /*add point markers to the map*/
-// Add point markers to the map
-  function onPointDataLoad(){
-    var points = pointData.sheets(constants.pointsSheetName);
-    var icons=pointData.sheets(constants.iconsSheetName);
-    var layers;
-    var group = '';
-    if (points && points.elements.length > 0) {
-      layers = determineLayers(points.elements,icons.elements);
-      //group = mapPoints(points.elements,icons.elements,layers);
-    } else {
-      completePoints = true;
-    }
-    //centerAndZoomMap(group);
-  }
+
   /**
    * Here all data processing from the spreadsheet happens
    */
   function onMapDataLoad(options, points, icons) {
+
     createDocumentSettings(options);
-
-    /*createPolygonSettings(mapData.sheets(constants.polygonsSheetName).elements);
-    i = 1;
-    while (mapData.sheets(constants.polygonsSheetName + i)) {
-      createPolygonSettings(mapData.sheets(constants.polygonsSheetName + i).elements);
-      i++;
-      polygonSheets++;
-    }*/
-
     document.title = getSetting('_mapTitle');
     addBaseMap();
 
@@ -687,13 +635,20 @@ new L.GPX(gpx, {async: true,polyline_options: {
       group = mapPoints(points,icons,layers);
     } else {
       completePoints = true;
-    }   
+    }
 
     centerAndZoomMap(group);
 
+    // Add polylines
+    /*if (polylines && polylines.length > 0) {
+      processPolylines(polylines);
+    } else {
+      completePolylines = true;
+    }*/
 
     // Add polygons
-    /*if (getPolygonSetting(0, '_polygonsGeojsonURL')) {
+    /*if (getPolygonSetting(0, '_polygonsGeojsonURL')
+      && getPolygonSetting(0, '_polygonsGeojsonURL').trim()) {
       loadAllGeojsons(0);
     } else {
       completePolygons = true;
@@ -702,28 +657,27 @@ new L.GPX(gpx, {async: true,polyline_options: {
     // Add Nominatim Search control
     if (getSetting('_mapSearch') !== 'off') {
       var geocoder = L.Control.geocoder({
-        expand: 'touch',
-        placeholder:'Zoek...',
+        expand: 'click',
         position: getSetting('_mapSearch'),
-        geocoder: new L.Control.Geocoder.Nominatim({
+        
+        geocoder: L.Control.Geocoder.nominatim({
           geocodingQueryParams: {
-            viewbox: [],  // by default, viewbox is empty
-            bounded: 0,
+            viewbox: '',  // by default, viewbox is empty
+            bounded: 1,
           }
-        }),showResultIcons:false
+        }),
       }).addTo(map);
 
       function updateGeocoderBounds() {
         var bounds = map.getBounds();
-        var mapBounds = [
-          bounds._southWest.lat, bounds._northEast.lat,
-          bounds._southWest.lng, bounds._northEast.lng,
-        ];
-        geocoder.options.geocoder.options.geocodingQueryParams.viewbox = mapBounds;
+        geocoder.options.geocoder.options.geocodingQueryParams.viewbox = [
+            bounds._southWest.lng, bounds._southWest.lat,
+            bounds._northEast.lng, bounds._northEast.lat
+          ].join(',');
       }
 
       // Update search viewbox coordinates every time the map moves
-      //map.on('moveend', updateGeocoderBounds);
+     // map.on('moveend', updateGeocoderBounds);
     }
 
     // Add location control
@@ -750,11 +704,12 @@ new L.GPX(gpx, {async: true,polyline_options: {
     changeAttribution();
 
     // Append icons to categories in markers legend
-    $('#points-legend form label span').each(function(i) {
-      var legendIcon = (markerColors[i].indexOf('.') > 0)
-        ? '<img src="' + markerColors[i] + '" class="markers-legend-icon">'
-        : '&nbsp;<i class="fa fa-map-marker" style="color: '
-          + markerColors[i]
+    $('#points-legend label span').each(function(i) {
+      var g = $(this).text().trim();
+      var legendIcon = (group2color[ g ].indexOf('.') > 0)
+        ? '<img src="' + group2color[ g ] + '" class="markers-legend-icon">'
+        : '&nbsp;<i class="fas fa-map-marker" style="color: '
+          + group2color[ g ]
           + '"></i>';
       $(this).prepend(legendIcon);
     });
@@ -763,14 +718,14 @@ new L.GPX(gpx, {async: true,polyline_options: {
     showMap();
 
     function showMap() {
-      if (completePoints && completePolylines) {
-        $('.ladder h6').append('<span class="legend-arrow"><i class="fa fa-chevron-down"></i></span>');
+      if (completePoints) {
+        $('.ladder h6').append('<span class="legend-arrow"><i class="fas fa-chevron-down"></i></span>');
         $('.ladder h6').addClass('minimize');
 
         /*for (i in allPolygonLegends) {
           if (getPolygonSetting(i, '_polygonsLegendIcon') != '') {
             $('.polygons-legend' + i + ' h6').prepend(
-              '<span class="legend-icon"><i class="fa ' + getPolygonSetting(i, '_polygonsLegendIcon') + '"></i></span>');
+              '<span class="legend-icon"><i class="fas ' + getPolygonSetting(i, '_polygonsLegendIcon') + '"></i></span>');
           }
         }*/
 
@@ -790,7 +745,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
           }
         });
 
-        $('.ladder h6').get(0).click();
+        $('.ladder h6').first().click();
 
         $('#map').css('visibility', 'visible');
         $('.loader').hide();
@@ -805,7 +760,8 @@ new L.GPX(gpx, {async: true,polyline_options: {
         setTimeout(showMap, 50);
       }
     }
-	// Add Google Analytics if the ID exists
+
+    // Add Google Analytics if the ID exists
     var ga = getSetting('_googleAnalytics');
     console.log(ga)
     if ( ga && ga.length >= 10 ) {
@@ -817,7 +773,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', ga);
-    }																	  			 
+    }
   }
 
   /**
@@ -880,6 +836,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
           line = L.polyline(latlng, {
             color: (p[index]['Color'] == '') ? 'grey' : p[index]['Color'],
             weight: trySetting('_polylinesWeight', 2),
+            pane: 'shadowPane'
           }).addTo(map);
 
           if (p[index]['Description'] && p[index]['Description'] != '') {
@@ -899,7 +856,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
             if (getSetting('_polylinesLegendTitle') != '') {
               $('#polylines-legend').prepend('<h6 class="pointer">' + getSetting('_polylinesLegendTitle') + '</h6>');
               if (getSetting('_polylinesLegendIcon') != '') {
-                $('#polylines-legend h6').prepend('<span class="legend-icon"><i class="fa '
+                $('#polylines-legend h6').prepend('<span class="legend-icon"><i class="fas '
                   + getSetting('_polylinesLegendIcon') + '"></i></span>');
               }
 
@@ -929,7 +886,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     // This is a pop-up for mobile device
     if (window.matchMedia("only screen and (max-width: 760px)").matches) {
       $('body').append('<div id="mobile-intro-popup"><p>' + info +
-        '</p><div id="mobile-intro-popup-close"><i class="fa fa-times"></i></div></div>');
+        '</p><div id="mobile-intro-popup-close"><i class="fas fa-times"></i></div></div>');
 
       $('#mobile-intro-popup-close').click(function() {
         $("#mobile-intro-popup").hide();
@@ -989,45 +946,13 @@ new L.GPX(gpx, {async: true,polyline_options: {
    */
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    var basemaplijst=basemap.split(',');
-    var basemaps={};
-    for (i=0;i<basemaplijst.length;i++){
-      var basemapinst=L.tileLayer.provider(basemaplijst[i], {
+    L.tileLayer.provider(basemap, {
       maxZoom: 18
-    });
-      basemapinst.addTo(map);
-      basemaps[basemaplijst[i]]=basemapinst;
-    };
-  
-   
-    var HikeBike_HikeBike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	});
-    
-    var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-	maxZoom: 17,
-	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-	});
-	  
-var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=20f1caa9ced24cf980c15f81bcbd7bf3', {
-	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	apikey: '<your apikey>',
-	maxZoom: 22
-});
-	  
-	  
-    
+    }).addTo(map);
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
-    basemaps["OpenTopoMap"]=OpenTopoMap;
-    basemaps["HikeBike"]=HikeBike_HikeBike;
-    basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
-    L.control.layers(basemaps).addTo(map);
   }
-  
-  
 
   /**
    * Returns the value of a setting s
@@ -1042,11 +967,12 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
    * getSetting(s) is equivalent to documentSettings[constants.s]
    */
   function getPolygonSetting(p, s) {
-	if (polygonSettings[p]) {						 
-    return polygonSettings[p][constants[s]];
-	return false; 
+    if (polygonSettings[p]) {
+      return polygonSettings[p][constants[s]];
+    }
+    return false;
   }
-  }
+
   /**
    * Returns the value of setting named s from constants.js
    * or def if setting is either not set or does not exist
@@ -1069,22 +995,16 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
    * Triggers the load of the spreadsheet and map creation
    */
    var mapData;
-   var pointData;
-  
-  
-  $.ajax({
+
+   $.ajax({
        url:'./csv/Options.csv',
        type:'HEAD',
        error: function() {
          // Options.csv does not exist in the root level, so use Tabletop to fetch data from
          // the Google sheet
 
-		 //Zoek googleApiKey in constants
          if (typeof googleApiKey !== 'undefined' && googleApiKey) {
 
-
-		  //  <!-- PapaParse --> Voeg dit toe aan reis.html
-		//<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
           var parse = function(res) {
             return Papa.parse(Papa.unparse(res[0].values), {header: true} ).data;
           }
@@ -1103,26 +1023,27 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
                 'Could not load data from the Google Sheet'
               }
 
-              // First, read 3 sheets: Options, Points and Icons
+              // First, read 3 sheets: Options, Points, and Icons
               $.when(
                 $.getJSON(apiUrl + spreadsheetId + '/values/Options?key=' + googleApiKey),
                 $.getJSON(apiUrl + spreadsheetId + '/values/Points?key=' + googleApiKey),
-		$.getJSON(apiUrl + spreadsheetId + '/values/TypeIcons?key=' + googleApiKey)      
-              ).done(function(options, points,icons) {
+                $.getJSON(apiUrl + spreadsheetId + '/values/TypeIcons?key=' + googleApiKey)
+              ).done(function(options, points, icons) {
 
+                // Which sheet names contain polygon data?
+                //var polygonSheets = sheets.filter(function(name) { return name.indexOf('Polygons') === 0})
 
-                  // Load map once all polygon sheets have been loaded (if any)
+                // Define a recursive function to fetch data from a polygon sheet
                     onMapDataLoad(
                       parse(options),
                       parse(points),
-		      parse(icons)
+                      parse(polylines)
                     )
 
-                
               })
               
-            })
-
+            }
+          )
 
          } else {
           alert('You load data from a Google Sheet, you need to add a free Google API key')
@@ -1174,9 +1095,6 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
       documentSettings[setting.Setting] = setting.Customize;
     }
   }
-  
-  
-  
 
   /**
    * Reformulates polygonSettings as a dictionary, e.g.
