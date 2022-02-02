@@ -72,13 +72,18 @@ $(window).on('load', function() {
     for (var i in points) {
       var group = points[i].Group;
       if (group && groups.indexOf(group) === -1) {
-        // Add group to groups
-        groups.push(group);
+          for (e in icons){iconel=icons[e];
+          if (iconel['Group']==points[i].Group){
+	      
+        
 
         // Add color to the crosswalk
-        group2color[ group ] = points[i]['Marker Icon'].indexOf('.') > 0
-          ? points[i]['Marker Icon']
-          : points[i]['Marker Color'];
+        group2color[ group ] = iconel['Marker Icon'].indexOf('.') > 0
+          ? iconel['Marker Icon']
+          : iconel['Marker Color']
+	  }};	  
+	// Add group to groups
+        groups.push(group);
       }
     }
 
