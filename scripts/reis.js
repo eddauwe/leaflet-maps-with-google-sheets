@@ -1105,7 +1105,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
                 
               })
               
-            }
+            })
 
 
          } else {
