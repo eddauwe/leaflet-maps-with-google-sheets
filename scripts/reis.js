@@ -1045,8 +1045,16 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 	apikey: '<your apikey>',
 	maxZoom: 22
 });
+	  //overlaymaps
+	  var WaymarkedTrails_hiking = L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
 	  
 	  
+	var overlayMaps = {
+	    "Waymarkedtrails": WaymarkedTrails_hiking
+	};
     
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
@@ -1055,7 +1063,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
     basemaps["OpenTopoMap"]=OpenTopoMap;
     basemaps["CyclOSM"]=CyclOSM;
     basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
-    L.control.layers(basemaps).addTo(map);		   
+    L.control.layers(basemaps,overlayMaps).addTo(map);		   
    
   
   }
