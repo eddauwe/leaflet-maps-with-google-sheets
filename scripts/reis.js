@@ -1025,11 +1025,15 @@ $(window).on('load', function() {
       basemaps[basemaplijst[i]]=basemapinst;
     };
   
-   
-    var HikeBike_HikeBike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+  var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	});
+});
+   
+    var CyclOSM = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
     
     var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	maxZoom: 17,
@@ -1047,8 +1051,9 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
+    basemaps["OpenStreetMap"]=OpenStreetMap_Mapnik;  
     basemaps["OpenTopoMap"]=OpenTopoMap;
-    basemaps["HikeBike"]=HikeBike_HikeBike;
+    basemaps["CyclOSM"]=CyclOSM;
     basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
     L.control.layers(basemaps).addTo(map);		   
    
