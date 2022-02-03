@@ -89,6 +89,8 @@ src="//www.outdooractive.com/alpportal/oa_head.js?proj=api-dev-oa&amp;key=yourte
       scrollWheelZoom: true,
       tap: false
     }).setView([41.76,-72.69], 11); // default center is overridden by Google Sheet options and points
+	  
+    L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
   </script>
 
   <script type="text/javascript" src="./google-doc-url.js"></script>
