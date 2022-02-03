@@ -3,6 +3,7 @@ $(window).on('load', function() {
   var group2color = {};
 
   var polygonSettings = [];
+						
   var polygonsLegend;
 
   var completePoints = false;
@@ -100,6 +101,24 @@ $(window).on('load', function() {
     return layers;
   }
 
+  
+						 
+							 
+							
+								  
+																							 
+											   
+				   
+				  
+			   
+					
+								
+									  
+			  
+		  
+		 
+	   
+  
   /**
    * Assigns points to appropriate layers and clusters them if needed
    */
@@ -131,7 +150,12 @@ $(window).on('load', function() {
           iconel['Marker Color'].toLowerCase(),
           iconel['Icon Color']
         );
+	
 	  }}
+	  
+	  
+	  
+								   
       if (point.Latitude !== undefined && point.Longitude !== undefined) {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
@@ -144,6 +168,7 @@ $(window).on('load', function() {
 
         markerArray.push(marker);
       }
+	  
 	  //gpx lijnen
 	  /*else
 		{var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
@@ -162,7 +187,12 @@ $(window).on('load', function() {
          route.addTo(layers[point.Group]);
        }
       }		*/  
+	  
+	  
     }
+  
+
+	
 
     var group = L.featureGroup(markerArray);
     var clusters = (getSetting('_markercluster') === 'on') ? true : false;
@@ -196,6 +226,7 @@ $(window).on('load', function() {
       });
 
       if (getSetting('_pointsLegendPos') !== 'off') {
+								   
         pointsLegend.addTo(map);
         pointsLegend._container.id = 'points-legend';
         pointsLegend._container.className += ' ladder';
@@ -522,6 +553,8 @@ $(window).on('load', function() {
   function polygonStyle(feature) {
     var value = feature.properties[allPolygonLayers[polygon][layer][0].trim()];
 
+				   
+
     if (feature.geometry.type == 'Point') {
       return {  // Point style
         radius: 4,
@@ -609,6 +642,8 @@ $(window).on('load', function() {
           html: feature.properties[getPolygonSetting(polygon, '_polygonLabel')],
         })
       });
+
+															
       allTextLabels[polygon].push(myTextLabel);
     }
   }
@@ -623,16 +658,42 @@ $(window).on('load', function() {
     });
   }
 
+								  
+							   
+							 
+															 
+														 
+			   
+				   
+											   
+															   
+																 
+			
+							
+	 
+							  
+   
   /**
    * Here all data processing from the spreadsheet happens
    */
   function onMapDataLoad(options, points, icons) {
 
     createDocumentSettings(options);
+
+																				  
+		  
+															 
+																					  
+		  
+					  
+	   
+
     document.title = getSetting('_mapTitle');
     addBaseMap();
 
     // Add point markers to the map
+														   
+													   
     var layers;
     var group = '';
     if (points && points.length > 0) {
@@ -645,6 +706,7 @@ $(window).on('load', function() {
     centerAndZoomMap(group);
 
     // Add polylines
+																 
     /*if (polylines && polylines.length > 0) {
       processPolylines(polylines);
     } else {
@@ -663,6 +725,7 @@ $(window).on('load', function() {
     if (getSetting('_mapSearch') !== 'off') {
       var geocoder = L.Control.geocoder({
         expand: 'click',
+							  
         position: getSetting('_mapSearch'),
         
         geocoder: L.Control.Geocoder.nominatim({
@@ -679,6 +742,7 @@ $(window).on('load', function() {
             bounds._southWest.lng, bounds._southWest.lat,
             bounds._northEast.lng, bounds._northEast.lat
           ].join(',');
+																				   
       }
 
       // Update search viewbox coordinates every time the map moves
@@ -951,13 +1015,47 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    L.tileLayer.provider(basemap, {
+	var basemaplijst=basemap.split(',');
+    var basemaps={};
+    for (i=0;i<basemaplijst.length;i++){
+      var basemapinst=L.tileLayer.provider(basemaplijst[i], {
       maxZoom: 18
-    }).addTo(map);
+    });
+      basemapinst.addTo(map);
+      basemaps[basemaplijst[i]]=basemapinst;
+    };
+  
+   
+    var HikeBike_HikeBike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	});
+    
+    var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+	});
+	  
+var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=20f1caa9ced24cf980c15f81bcbd7bf3', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	apikey: '<your apikey>',
+	maxZoom: 22
+});
+	  
+	  
+    
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
+    basemaps["OpenTopoMap"]=OpenTopoMap;
+    basemaps["HikeBike"]=HikeBike_HikeBike;
+    basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
+    L.control.layers(basemaps).addTo(map);		   
+   
+  
   }
+
+	 
 
   /**
    * Returns the value of a setting s
@@ -1001,6 +1099,8 @@ $(window).on('load', function() {
    */
    var mapData;
 
+		  
+							 
    $.ajax({
        url:'./csv/Options.csv',
        type:'HEAD',
@@ -1100,6 +1200,9 @@ $(window).on('load', function() {
       documentSettings[setting.Setting] = setting.Customize;
     }
   }
+  
+
+	 
 
   /**
    * Reformulates polygonSettings as a dictionary, e.g.
