@@ -170,7 +170,7 @@ $(window).on('load', function() {
       }
 	  
 	  //gpx lijnen
-	  /*else
+	  else
 		{var gpx = point['Location']; //line['Location'] URL to your GPX file or the GPX itself
 	var iconel = icons[3]
        if (layers !== undefined && layers.length !== 0) {
@@ -186,7 +186,7 @@ $(window).on('load', function() {
                               });
          route.addTo(layers[point.Group]);
        }
-      }		*/  
+      }		  
 	  
 	  
     }
