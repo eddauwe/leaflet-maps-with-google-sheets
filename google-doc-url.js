@@ -7,4 +7,4 @@ var googleDocURLreceptie='https://docs.google.com/spreadsheets/d/1R_5tZo6OigFcFB
 var googleDocURLmoezel='https://docs.google.com/spreadsheets/d/1jN0e-1Lg-_Vd_pUO7oXVx47PLjmxY9SxXV_SzMEONK8/edit#gid=164271551';
 //huwelijksreis
 var googleDocURLoekraine='https://docs.google.com/spreadsheets/d/1avIZpx5j8_Eu4_8_7sFm03Hg8Xi_mFSiZ_T6hSmuVXc/edit#gid=164271551';
-
+var googleDocURLparijs='https://docs.google.com/spreadsheets/d/1GkGPli2wmz6f8lYyrY2lBtGlGDyFI7dmpkWmffjkI38/edit#gid=164271551';
