@@ -10,3 +10,6 @@ var googleDocURLoekraine='https://docs.google.com/spreadsheets/d/1avIZpx5j8_Eu4_
 
 // insert your own Google Sheets API key from https://console.developers.google.com
 var googleApiKey = 'AIzaSyBJJ6sOFPYo2i8mBmTugvF0DP56O9kR5LA';
+
+//parijsreis
+var googleDocURLparijs = 'https://docs.google.com/spreadsheets/d/1GkGPli2wmz6f8lYyrY2lBtGlGDyFI7dmpkWmffjkI38/edit#gid=164271551';
