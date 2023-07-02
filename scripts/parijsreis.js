@@ -962,7 +962,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
    */
   function changeAttribution() {
     var attributionHTML = $('.leaflet-control-attribution')[0].innerHTML;
-    var credit = 'View <a href="' + googleDocURL + '" target="_blank">data</a>';
+    var credit = 'View <a href="' + googleDocURLparijs + '" target="_blank">data</a>';
     var name = getSetting('_authorName');
     var url = getSetting('_authorURL');
 
@@ -1075,7 +1075,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
          // Options.csv does not exist, so use Tabletop to fetch data from
          // the Google sheet
          mapData = Tabletop.init({
-           key: googleDocURL,
+           key: googleDocURLparijs,
            callback: function(data, mapData) { onMapDataLoad(); }
          });
        },
