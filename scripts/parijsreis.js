@@ -990,7 +990,7 @@ $(window).on('load', function() {
    */
   function changeAttribution() {
     var attributionHTML = $('.leaflet-control-attribution')[0].innerHTML;
-    var credit = 'View <a href="' + googleDocURL + '" target="_blank">data</a>';
+    var credit = 'View <a href="' + googleDocURLparijs + '" target="_blank">data</a>';
     var name = getSetting('_authorName');
     var url = getSetting('_authorURL');
 
@@ -1128,9 +1128,9 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
           }
 
           var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
-          var spreadsheetId = googleDocURL.indexOf('/d/') > 0
-            ? googleDocURL.split('/d/')[1].split('/')[0]
-            : googleDocURL
+          var spreadsheetId = googleDocURLparijs.indexOf('/d/') > 0
+            ? googleDocURLparijs.split('/d/')[1].split('/')[0]
+            : googleDocURLparijs
 
           $.getJSON(
             apiUrl + spreadsheetId + '?key=' + googleApiKey
