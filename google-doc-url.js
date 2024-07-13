@@ -5,6 +5,7 @@ var googleDocURLreceptie='https://docs.google.com/spreadsheets/d/1R_5tZo6OigFcFB
 
 //moezelreis
 var googleDocURLmoezel='https://docs.google.com/spreadsheets/d/1jN0e-1Lg-_Vd_pUO7oXVx47PLjmxY9SxXV_SzMEONK8/edit#gid=164271551';
+var googleDocURLmoezel2024='https://docs.google.com/spreadsheets/d/1ywHQ_NWgWjGWXwL1r7Uo7omQULp-cR44doHMHG85kwo/edit?gid=164271551#gid=164271551';
 //huwelijksreis
 var googleDocURLoekraine='https://docs.google.com/spreadsheets/d/1avIZpx5j8_Eu4_8_7sFm03Hg8Xi_mFSiZ_T6hSmuVXc/edit#gid=164271551';
 
