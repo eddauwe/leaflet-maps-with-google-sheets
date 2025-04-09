@@ -16,6 +16,8 @@ Customize Leaflet maps with a linked Google Sheets template and GeoJSON data on 
 
 -Duitsland reis https://docs.google.com/spreadsheets/d/1FulPl5iOdX6t7Q4Ra4tvMdY7NPeR9YdTPwCSuyP8_-s/edit#gid=164271551
 
+-Nederland reis https://docs.google.com/spreadsheets/d/1e_RgGS-5AE7xozK9CtPRFWE-r9Us2liHANLdi9tPRwo/edit?gid=164271551#gid=164271551
+
 ## Create your own
 - See video with step-by-step tutorial in *Data Visualization for All* http://www.datavizforall.org/leaflet/with-google-sheets/
 
