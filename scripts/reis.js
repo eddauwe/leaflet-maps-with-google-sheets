@@ -990,7 +990,7 @@ new L.GPX(gpx, {async: true,polyline_options: {
     var basemaplijst=basemap.split(',');
     var basemaps={};
     for (i=0;i<basemaplijst.length;i++){
-      var basemapinst=L.tileLayer.provider(basemaplijst[i], {
+      var basemapinst=L.tileLayer(basemaplijst[i], {
       maxZoom: 18
     });
       basemapinst.addTo(map);
