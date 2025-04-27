@@ -8,13 +8,17 @@
 
 /*global L*/
 
-(function (window, document, undefined) {
+(function (window, document,L, undefined) {
     "use strict";
     /*
      * Leaflet.AwesomeMarkers assumes that you have already included the Leaflet library.
      */
+    if (!L) {
+      console.error('Leaflet must be loaded first!');
+      return;
+    }
 
-    L.AwesomeMarkers = {};
+    L.AwesomeMarkers = L.AwesomeMarkers || {};
 
     L.AwesomeMarkers.version = '2.0.1';
 
