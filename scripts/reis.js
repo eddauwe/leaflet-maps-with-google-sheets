@@ -1025,6 +1025,7 @@ $(window).on('load', function() {
     *  basemaps[basemaplijst[i]]=basemapinst;
     *};
     */
+  var basemaps={};
   
   var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
