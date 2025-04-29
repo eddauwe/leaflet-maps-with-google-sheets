@@ -1014,16 +1014,17 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
   function addBaseMap() {
-    var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-	var basemaplijst=basemap.split(',');
-    var basemaps={};
-    for (i=0;i<basemaplijst.length;i++){
-      var basemapinst=L.tileLayer(basemaplijst[i], {
-      maxZoom: 18
-    });
-      basemapinst.addTo(map);
-      basemaps[basemaplijst[i]]=basemapinst;
-    };
+    /**var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
+    *var basemaplijst=basemap.split(',');
+    *var basemaps={};
+    *for (i=0;i<basemaplijst.length;i++){
+    *  var basemapinst=L.tileLayer(basemaplijst[i], {
+    *  maxZoom: 18
+    *});
+    *  basemapinst.addTo(map);
+    *  basemaps[basemaplijst[i]]=basemapinst;
+    *};
+    */
   
   var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
