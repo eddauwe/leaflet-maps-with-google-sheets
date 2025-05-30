@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="outdooractive - http://www.outdooractive.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xmlns:oa="http://www.outdooractive.com/GPX/Extensions/1">
+  <metadata>
+    <name>Wurmtour - von Aachen nach Herzogenrath</name>
+    <author>
+      <name>StädteRegion Aachen - StädteRegion Aachen</name>
+    </author>
+    <link href="https://www.outdooractive.com/r/3853362"/>
+    <time>2024-07-10T11:02:02.819Z</time>
+    <extensions>
+      <oa:oaCategory>hikingTourTrail</oa:oaCategory>
+    </extensions>
+  </metadata>
+  <trk>
+    <name>Wurmtour - von Aachen nach Herzogenrath</name>
+    <desc>Diese ca. 16,5 km lange Wanderung führt uns zunächst durch die historische Altstadt von Aachen und dann hinaus in das wilde, idyllische Wurmtal. </desc>
+    <type>hikingTourTrail</type>
+    <trkseg>
+      <trkpt lat="50.768351" lon="6.088289">
+        <ele>177.5141</ele>
+        <name>50.768351,6.088289</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.768058" lon="6.086978">
+        <ele>177.08349</ele>
+      </trkpt>
+      <trkpt lat="50.768104" lon="6.086543">
+        <ele>176.36894</ele>
+      </trkpt>
+      <trkpt lat="50.768517" lon="6.086767">
+        <ele>174.99604</ele>
+      </trkpt>
+      <trkpt lat="50.768816" lon="6.086627">
+        <ele>172.92462</ele>
+      </trkpt>
+      <trkpt lat="50.769429" lon="6.086124">
+        <ele>168.07447</ele>
+      </trkpt>
+      <trkpt lat="50.770341" lon="6.085092">
+        <ele>161.57469</ele>
+      </trkpt>
+      <trkpt lat="50.770966" lon="6.08466">
+        <ele>160.70585</ele>
+      </trkpt>
+      <trkpt lat="50.771378" lon="6.08455">
+        <ele>160.43081</ele>
+      </trkpt>
+      <trkpt lat="50.772051" lon="6.084598">
+        <ele>160.39934</ele>
+      </trkpt>
+      <trkpt lat="50.772978" lon="6.084434">
+        <ele>162.65313</ele>
+      </trkpt>
+      <trkpt lat="50.773699" lon="6.083867">
+        <ele>164.35645</ele>
+      </trkpt>
+      <trkpt lat="50.77423" lon="6.083556">
+        <ele>165.88841</ele>
+      </trkpt>
+      <trkpt lat="50.774339" lon="6.083053">
+        <ele>168.4958</ele>
+      </trkpt>
+      <trkpt lat="50.774581" lon="6.082667">
+        <ele>170.71326</ele>
+      </trkpt>
+      <trkpt lat="50.77537" lon="6.082569">
+        <ele>173.80396</ele>
+      </trkpt>
+      <trkpt lat="50.775766" lon="6.082169">
+        <ele>174.02662</ele>
+        <name>50.775766,6.082169</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.77685" lon="6.084093">
+        <ele>172.36848</ele>
+      </trkpt>
+      <trkpt lat="50.777007" lon="6.08455">
+        <ele>171.82223</ele>
+      </trkpt>
+      <trkpt lat="50.777433" lon="6.086568">
+        <ele>167.48003</ele>
+      </trkpt>
+      <trkpt lat="50.777677" lon="6.087452">
+        <ele>163.37792</ele>
+      </trkpt>
+      <trkpt lat="50.777969" lon="6.088118">
+        <ele>161.03447</ele>
+      </trkpt>
+      <trkpt lat="50.77834" lon="6.088735">
+        <ele>161.30741</ele>
+      </trkpt>
+      <trkpt lat="50.780933" lon="6.08796">
+        <ele>174.91147</ele>
+      </trkpt>
+      <trkpt lat="50.781411" lon="6.087936">
+        <ele>177.62762</ele>
+      </trkpt>
+      <trkpt lat="50.781824" lon="6.088114">
+        <ele>180.07961</ele>
+        <name>50.781824,6.088114</name>
+        <extensions>
+          <oa:mapZoom>15</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.782202" lon="6.088569">
+        <ele>181.86749</ele>
+      </trkpt>
+      <trkpt lat="50.782117" lon="6.087499">
+        <ele>186.25697</ele>
+      </trkpt>
+      <trkpt lat="50.783854" lon="6.085396">
+        <ele>226.68185</ele>
+      </trkpt>
+      <trkpt lat="50.783935" lon="6.084666">
+        <ele>223.93205</ele>
+      </trkpt>
+      <trkpt lat="50.785075" lon="6.084666">
+        <ele>218.66844</ele>
+      </trkpt>
+      <trkpt lat="50.786648" lon="6.083207">
+        <ele>218.80906</ele>
+      </trkpt>
+      <trkpt lat="50.788846" lon="6.079817">
+        <ele>219.35968</ele>
+      </trkpt>
+      <trkpt lat="50.788737" lon="6.078486">
+        <ele>216.37085</ele>
+      </trkpt>
+      <trkpt lat="50.789361" lon="6.077499">
+        <ele>216.31875</ele>
+      </trkpt>
+      <trkpt lat="50.790202" lon="6.078701">
+        <ele>196.76268</ele>
+      </trkpt>
+      <trkpt lat="50.790745" lon="6.081276">
+        <ele>175.92345</ele>
+      </trkpt>
+      <trkpt lat="50.791911" lon="6.081791">
+        <ele>168.57386</ele>
+      </trkpt>
+      <trkpt lat="50.792617" lon="6.081791">
+        <ele>164.92075</ele>
+      </trkpt>
+      <trkpt lat="50.792617" lon="6.083036">
+        <ele>163.72199</ele>
+      </trkpt>
+      <trkpt lat="50.792427" lon="6.084452">
+        <ele>160.21544</ele>
+        <name>Soers Kloster, Aachen</name>
+        <extensions>
+          <oa:mapZoom>15</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.793865" lon="6.085224">
+        <ele>155.53451</ele>
+      </trkpt>
+      <trkpt lat="50.794516" lon="6.084538">
+        <ele>153.15107</ele>
+      </trkpt>
+      <trkpt lat="50.798123" lon="6.083508">
+        <ele>146.92351</ele>
+      </trkpt>
+      <trkpt lat="50.798395" lon="6.084838">
+        <ele>145.36236</ele>
+      </trkpt>
+      <trkpt lat="50.798449" lon="6.08604">
+        <ele>144.62993</ele>
+      </trkpt>
+      <trkpt lat="50.798585" lon="6.088057">
+        <ele>143.92861</ele>
+      </trkpt>
+      <trkpt lat="50.799371" lon="6.091146">
+        <ele>143.4589</ele>
+      </trkpt>
+      <trkpt lat="50.799995" lon="6.091404">
+        <ele>142.83109</ele>
+      </trkpt>
+      <trkpt lat="50.800619" lon="6.093292">
+        <ele>142.26199</ele>
+      </trkpt>
+      <trkpt lat="50.800673" lon="6.094708">
+        <ele>142.33047</ele>
+      </trkpt>
+      <trkpt lat="50.80188" lon="6.09355">
+        <ele>140.52409</ele>
+      </trkpt>
+      <trkpt lat="50.802861" lon="6.092764">
+        <ele>145.33336</ele>
+      </trkpt>
+      <trkpt lat="50.803167" lon="6.092207">
+        <ele>147.14742</ele>
+      </trkpt>
+      <trkpt lat="50.803693" lon="6.091569">
+        <ele>149.34823</ele>
+      </trkpt>
+      <trkpt lat="50.803778" lon="6.091699">
+        <ele>149.36025</ele>
+      </trkpt>
+      <trkpt lat="50.80381" lon="6.091877">
+        <ele>149.70005</ele>
+      </trkpt>
+      <trkpt lat="50.80378" lon="6.092439">
+        <ele>147.45688</ele>
+      </trkpt>
+      <trkpt lat="50.803878" lon="6.092425">
+        <ele>147.99881</ele>
+        <name>50.803878,6.092425</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.804247" lon="6.092384">
+        <ele>148.37975</ele>
+      </trkpt>
+      <trkpt lat="50.804265" lon="6.092479">
+        <ele>148.3875</ele>
+        <name>Knotenpunkt 19</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.804277" lon="6.093058">
+        <ele>148.84746</ele>
+      </trkpt>
+      <trkpt lat="50.804321" lon="6.09315">
+        <ele>149.06515</ele>
+      </trkpt>
+      <trkpt lat="50.804579" lon="6.093315">
+        <ele>151.91569</ele>
+      </trkpt>
+      <trkpt lat="50.805061" lon="6.093475">
+        <ele>158.03587</ele>
+      </trkpt>
+      <trkpt lat="50.805639" lon="6.094233">
+        <ele>164.3243</ele>
+      </trkpt>
+      <trkpt lat="50.806165" lon="6.095858">
+        <ele>164.04719</ele>
+      </trkpt>
+      <trkpt lat="50.806454" lon="6.09629">
+        <ele>165.0795</ele>
+      </trkpt>
+      <trkpt lat="50.806945" lon="6.096702">
+        <ele>168.2316</ele>
+      </trkpt>
+      <trkpt lat="50.807156" lon="6.097564">
+        <ele>163.50877</ele>
+      </trkpt>
+      <trkpt lat="50.807479" lon="6.098358">
+        <ele>159.50616</ele>
+      </trkpt>
+      <trkpt lat="50.808958" lon="6.101073">
+        <ele>167.10758</ele>
+      </trkpt>
+      <trkpt lat="50.809274" lon="6.10126">
+        <ele>169.01144</ele>
+      </trkpt>
+      <trkpt lat="50.810262" lon="6.101271">
+        <ele>168.8636</ele>
+        <name>Obeliskenplatz im Paulinenwäldchen</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.810362" lon="6.101251">
+        <ele>168.45415</ele>
+        <name>50.810362,6.101251</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.810675" lon="6.101239">
+        <ele>166.44215</ele>
+        <name>Knotenpunkt 16</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.810968" lon="6.10131">
+        <ele>163.89261</ele>
+      </trkpt>
+      <trkpt lat="50.811166" lon="6.101558">
+        <ele>162.15845</ele>
+      </trkpt>
+      <trkpt lat="50.811479" lon="6.102145">
+        <ele>159.64702</ele>
+      </trkpt>
+      <trkpt lat="50.81184" lon="6.102313">
+        <ele>155.28593</ele>
+      </trkpt>
+      <trkpt lat="50.812013" lon="6.102515">
+        <ele>153.16448</ele>
+      </trkpt>
+      <trkpt lat="50.812104" lon="6.102781">
+        <ele>151.79547</ele>
+      </trkpt>
+      <trkpt lat="50.812128" lon="6.103063">
+        <ele>150.52186</ele>
+      </trkpt>
+      <trkpt lat="50.811996" lon="6.103655">
+        <ele>147.58247</ele>
+        <name>Knotenpunkt 15</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.811746" lon="6.104413">
+        <ele>139.7987</ele>
+        <name>50.811746,6.104413</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.811721" lon="6.104505">
+        <ele>138.89045</ele>
+        <name>Knotenpunkt 14</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.812236" lon="6.104188">
+        <ele>139.84178</ele>
+        <name>50.812236,6.104187</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.81249" lon="6.103996">
+        <ele>139.69351</ele>
+      </trkpt>
+      <trkpt lat="50.812779" lon="6.10355">
+        <ele>139.74853</ele>
+        <name>Knotenpunkt 13</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.812971" lon="6.103048">
+        <ele>140.33639</ele>
+      </trkpt>
+      <trkpt lat="50.813217" lon="6.103176">
+        <ele>139.31612</ele>
+      </trkpt>
+      <trkpt lat="50.813551" lon="6.103144">
+        <ele>139.14009</ele>
+      </trkpt>
+      <trkpt lat="50.814291" lon="6.103302">
+        <ele>136.63019</ele>
+      </trkpt>
+      <trkpt lat="50.815168" lon="6.103023">
+        <ele>143.12914</ele>
+      </trkpt>
+      <trkpt lat="50.815615" lon="6.103074">
+        <ele>146.53806</ele>
+      </trkpt>
+      <trkpt lat="50.816006" lon="6.103415">
+        <ele>145.9005</ele>
+      </trkpt>
+      <trkpt lat="50.816405" lon="6.103958">
+        <ele>145.96384</ele>
+      </trkpt>
+      <trkpt lat="50.817354" lon="6.105801">
+        <ele>134.51782</ele>
+      </trkpt>
+      <trkpt lat="50.817554" lon="6.105995">
+        <ele>134.67535</ele>
+      </trkpt>
+      <trkpt lat="50.817707" lon="6.106015">
+        <ele>135.4333</ele>
+      </trkpt>
+      <trkpt lat="50.817828" lon="6.105799">
+        <ele>135.54304</ele>
+      </trkpt>
+      <trkpt lat="50.817824" lon="6.104911">
+        <ele>137.238</ele>
+      </trkpt>
+      <trkpt lat="50.81805" lon="6.104158">
+        <ele>134.87013</ele>
+      </trkpt>
+      <trkpt lat="50.818043" lon="6.103635">
+        <ele>135.1596</ele>
+      </trkpt>
+      <trkpt lat="50.817911" lon="6.102467">
+        <ele>136.26605</ele>
+      </trkpt>
+      <trkpt lat="50.817983" lon="6.101176">
+        <ele>137.78786</ele>
+      </trkpt>
+      <trkpt lat="50.818151" lon="6.100486">
+        <ele>139.22075</ele>
+      </trkpt>
+      <trkpt lat="50.818884" lon="6.099657">
+        <ele>138.89958</ele>
+      </trkpt>
+      <trkpt lat="50.820204" lon="6.099377">
+        <ele>134.73084</ele>
+      </trkpt>
+      <trkpt lat="50.821079" lon="6.098978">
+        <ele>136.58407</ele>
+        <name>Knotenpunkt 23</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.821268" lon="6.09901">
+        <ele>138.5943</ele>
+      </trkpt>
+      <trkpt lat="50.821425" lon="6.099151">
+        <ele>140.54568</ele>
+      </trkpt>
+      <trkpt lat="50.821603" lon="6.099623">
+        <ele>139.85262</ele>
+      </trkpt>
+      <trkpt lat="50.82218" lon="6.100666">
+        <ele>139.88074</ele>
+        <name>Knotenpunkt 27</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.822143" lon="6.101612">
+        <ele>132.71966</ele>
+      </trkpt>
+      <trkpt lat="50.822094" lon="6.101871">
+        <ele>131.15101</ele>
+      </trkpt>
+      <trkpt lat="50.822451" lon="6.10388">
+        <ele>128.8694</ele>
+      </trkpt>
+      <trkpt lat="50.822556" lon="6.103997">
+        <ele>128.6486</ele>
+      </trkpt>
+      <trkpt lat="50.823273" lon="6.103984">
+        <ele>129.13805</ele>
+      </trkpt>
+      <trkpt lat="50.823386" lon="6.104139">
+        <ele>129.71157</ele>
+      </trkpt>
+      <trkpt lat="50.824291" lon="6.107863">
+        <ele>128.95822</ele>
+        <name>50.824291,6.107863</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.824321" lon="6.107977">
+        <ele>128.82814</ele>
+      </trkpt>
+      <trkpt lat="50.824499" lon="6.107972">
+        <ele>130.08504</ele>
+        <name>Knotenpunkt 25</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.824787" lon="6.108158">
+        <ele>131.97024</ele>
+      </trkpt>
+      <trkpt lat="50.825824" lon="6.108115">
+        <ele>136.78757</ele>
+      </trkpt>
+      <trkpt lat="50.826112" lon="6.107927">
+        <ele>139.19329</ele>
+        <name>50.826112,6.107927</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.826418" lon="6.10662">
+        <ele>142.85716</ele>
+        <name>50.826447,6.106660</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.826471" lon="6.106528">
+        <ele>142.02017</ele>
+      </trkpt>
+      <trkpt lat="50.826537" lon="6.106414">
+        <ele>140.96973</ele>
+        <name>Knotenpunkt 35</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.82691" lon="6.105633">
+        <ele>134.47107</ele>
+      </trkpt>
+      <trkpt lat="50.827158" lon="6.10525">
+        <ele>130.41754</ele>
+        <name>Knotenpunkt 38</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.827612" lon="6.105067">
+        <ele>125.12678</ele>
+      </trkpt>
+      <trkpt lat="50.828562" lon="6.105091">
+        <ele>122.64819</ele>
+      </trkpt>
+      <trkpt lat="50.828668" lon="6.105012">
+        <ele>124.22901</ele>
+      </trkpt>
+      <trkpt lat="50.828738" lon="6.104852">
+        <ele>126.22882</ele>
+      </trkpt>
+      <trkpt lat="50.828697" lon="6.104398">
+        <ele>126.10889</ele>
+      </trkpt>
+      <trkpt lat="50.828745" lon="6.104272">
+        <ele>126.42507</ele>
+      </trkpt>
+      <trkpt lat="50.828812" lon="6.104262">
+        <ele>127.06162</ele>
+      </trkpt>
+      <trkpt lat="50.829514" lon="6.105889">
+        <ele>142.35163</ele>
+      </trkpt>
+      <trkpt lat="50.829696" lon="6.106167">
+        <ele>144.93163</ele>
+      </trkpt>
+      <trkpt lat="50.830247" lon="6.106704">
+        <ele>147.83489</ele>
+      </trkpt>
+      <trkpt lat="50.830708" lon="6.107004">
+        <ele>151.76612</ele>
+        <name>50.830708,6.107004</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.830717" lon="6.107009">
+        <ele>151.79201</ele>
+        <name>Knotenpunkt 39</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.830863" lon="6.106656">
+        <ele>144.08715</ele>
+      </trkpt>
+      <trkpt lat="50.831168" lon="6.106565">
+        <ele>140.23218</ele>
+      </trkpt>
+      <trkpt lat="50.83152" lon="6.106348">
+        <ele>132.3488</ele>
+      </trkpt>
+      <trkpt lat="50.832216" lon="6.106728">
+        <ele>132.03683</ele>
+      </trkpt>
+      <trkpt lat="50.832653" lon="6.10672">
+        <ele>127.14251</ele>
+      </trkpt>
+      <trkpt lat="50.833534" lon="6.107289">
+        <ele>129.22494</ele>
+      </trkpt>
+      <trkpt lat="50.83391" lon="6.107426">
+        <ele>132.63296</ele>
+        <name>Knotenpunkt 41</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.834114" lon="6.106948">
+        <ele>127.38009</ele>
+      </trkpt>
+      <trkpt lat="50.835028" lon="6.105539">
+        <ele>126.59001</ele>
+      </trkpt>
+      <trkpt lat="50.835374" lon="6.104145">
+        <ele>124.60413</ele>
+      </trkpt>
+      <trkpt lat="50.836005" lon="6.10237">
+        <ele>125.21239</ele>
+      </trkpt>
+      <trkpt lat="50.836082" lon="6.101929">
+        <ele>123.88386</ele>
+      </trkpt>
+      <trkpt lat="50.836108" lon="6.101363">
+        <ele>120.4067</ele>
+        <name>Knotenpunkt 42</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.836392" lon="6.101448">
+        <ele>122.5458</ele>
+        <name>Knotenpunkt 43</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.836492" lon="6.101468">
+        <ele>121.89452</ele>
+      </trkpt>
+      <trkpt lat="50.836706" lon="6.101925">
+        <ele>123.31885</ele>
+      </trkpt>
+      <trkpt lat="50.837071" lon="6.102911">
+        <ele>127.97578</ele>
+      </trkpt>
+      <trkpt lat="50.837204" lon="6.103061">
+        <ele>127.9117</ele>
+      </trkpt>
+      <trkpt lat="50.837443" lon="6.103141">
+        <ele>125.476</ele>
+      </trkpt>
+      <trkpt lat="50.838063" lon="6.103855">
+        <ele>131.29109</ele>
+        <name>Knotenpunkt 44</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.838143" lon="6.103863">
+        <ele>132.35001</ele>
+        <name>50.838143,6.103863</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.83835" lon="6.103741">
+        <ele>133.91962</ele>
+      </trkpt>
+      <trkpt lat="50.838659" lon="6.103744">
+        <ele>134.99451</ele>
+      </trkpt>
+      <trkpt lat="50.839467" lon="6.103565">
+        <ele>132.72063</ele>
+      </trkpt>
+      <trkpt lat="50.840098" lon="6.103579">
+        <ele>136.76951</ele>
+      </trkpt>
+      <trkpt lat="50.840293" lon="6.103653">
+        <ele>140.08544</ele>
+      </trkpt>
+      <trkpt lat="50.840618" lon="6.104059">
+        <ele>151.3337</ele>
+      </trkpt>
+      <trkpt lat="50.840757" lon="6.104105">
+        <ele>153.65728</ele>
+      </trkpt>
+      <trkpt lat="50.84086" lon="6.104006">
+        <ele>153.07784</ele>
+      </trkpt>
+      <trkpt lat="50.840998" lon="6.103568">
+        <ele>147.88415</ele>
+      </trkpt>
+      <trkpt lat="50.841698" lon="6.103272">
+        <ele>152.86919</ele>
+        <name>Burg Wilhelmstein</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.842153" lon="6.103095">
+        <ele>150.59117</ele>
+      </trkpt>
+      <trkpt lat="50.842253" lon="6.103209">
+        <ele>149.09176</ele>
+        <name>Knotenpunkt 3</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.842302" lon="6.103263">
+        <ele>148.31594</ele>
+      </trkpt>
+      <trkpt lat="50.842411" lon="6.104097">
+        <ele>152.05244</ele>
+      </trkpt>
+      <trkpt lat="50.842482" lon="6.103023">
+        <ele>142.08205</ele>
+      </trkpt>
+      <trkpt lat="50.842458" lon="6.102516">
+        <ele>138.02874</ele>
+      </trkpt>
+      <trkpt lat="50.842211" lon="6.101234">
+        <ele>128.91365</ele>
+      </trkpt>
+      <trkpt lat="50.841722" lon="6.099298">
+        <ele>116.42662</ele>
+        <name>Knotenpunkt 4</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.841828" lon="6.099299">
+        <ele>117.08666</ele>
+        <name>50.841828,6.099299</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.842104" lon="6.099214">
+        <ele>119.83335</ele>
+      </trkpt>
+      <trkpt lat="50.842276" lon="6.098996">
+        <ele>123.28752</ele>
+      </trkpt>
+      <trkpt lat="50.843566" lon="6.098597">
+        <ele>130.53892</ele>
+      </trkpt>
+      <trkpt lat="50.843575" lon="6.098545">
+        <ele>130.41347</ele>
+        <name>Knotenpunkt 5</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.843734" lon="6.09842">
+        <ele>129.69733</ele>
+      </trkpt>
+      <trkpt lat="50.844321" lon="6.098643">
+        <ele>133.85799</ele>
+      </trkpt>
+      <trkpt lat="50.84476" lon="6.098079">
+        <ele>128.5071</ele>
+      </trkpt>
+      <trkpt lat="50.845138" lon="6.096951">
+        <ele>119.75919</ele>
+      </trkpt>
+      <trkpt lat="50.845573" lon="6.096244">
+        <ele>117.39795</ele>
+      </trkpt>
+      <trkpt lat="50.846024" lon="6.095252">
+        <ele>115.57223</ele>
+      </trkpt>
+      <trkpt lat="50.846151" lon="6.094833">
+        <ele>116.86593</ele>
+        <name>Knotenpunkt 48</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.847424" lon="6.095851">
+        <ele>155.16812</ele>
+      </trkpt>
+      <trkpt lat="50.847538" lon="6.095905">
+        <ele>155.99511</ele>
+      </trkpt>
+      <trkpt lat="50.847957" lon="6.095856">
+        <ele>159.01925</ele>
+      </trkpt>
+      <trkpt lat="50.848453" lon="6.096391">
+        <ele>161.70594</ele>
+      </trkpt>
+      <trkpt lat="50.84875" lon="6.096843">
+        <ele>163.50329</ele>
+        <name>50.848779,6.096876</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.848907" lon="6.096467">
+        <ele>163.5581</ele>
+      </trkpt>
+      <trkpt lat="50.849045" lon="6.096313">
+        <ele>163.84486</ele>
+        <name>Historischer Ortskern Pley</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.84936" lon="6.094656">
+        <ele>164.2018</ele>
+        <name>Knotenpunkt 8</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.849485" lon="6.094089">
+        <ele>162.78754</ele>
+      </trkpt>
+      <trkpt lat="50.85029" lon="6.093865">
+        <ele>161.77007</ele>
+      </trkpt>
+      <trkpt lat="50.85049" lon="6.093643">
+        <ele>160.4912</ele>
+      </trkpt>
+      <trkpt lat="50.850821" lon="6.092643">
+        <ele>152.20548</ele>
+      </trkpt>
+      <trkpt lat="50.851256" lon="6.091907">
+        <ele>148.99505</ele>
+      </trkpt>
+      <trkpt lat="50.851341" lon="6.091548">
+        <ele>146.47703</ele>
+      </trkpt>
+      <trkpt lat="50.85139" lon="6.090744">
+        <ele>138.03685</ele>
+      </trkpt>
+      <trkpt lat="50.851639" lon="6.090017">
+        <ele>134.25771</ele>
+      </trkpt>
+      <trkpt lat="50.851662" lon="6.089214">
+        <ele>126.74843</ele>
+      </trkpt>
+      <trkpt lat="50.851732" lon="6.088985">
+        <ele>125.83758</ele>
+      </trkpt>
+      <trkpt lat="50.852486" lon="6.088616">
+        <ele>133.16359</ele>
+      </trkpt>
+      <trkpt lat="50.852748" lon="6.088622">
+        <ele>132.70903</ele>
+        <name>Knotenpunkt 9</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.852792" lon="6.088654">
+        <ele>132.8288</ele>
+        <name>Steinbruch</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.853063" lon="6.088843">
+        <ele>133.21526</ele>
+      </trkpt>
+      <trkpt lat="50.853254" lon="6.089098">
+        <ele>134.54838</ele>
+      </trkpt>
+      <trkpt lat="50.853692" lon="6.089158">
+        <ele>130.32709</ele>
+      </trkpt>
+      <trkpt lat="50.854147" lon="6.089369">
+        <ele>125.60938</ele>
+      </trkpt>
+      <trkpt lat="50.854287" lon="6.08952">
+        <ele>124.63477</ele>
+      </trkpt>
+      <trkpt lat="50.854456" lon="6.089873">
+        <ele>124.5188</ele>
+      </trkpt>
+      <trkpt lat="50.855021" lon="6.090462">
+        <ele>118.78942</ele>
+      </trkpt>
+      <trkpt lat="50.855621" lon="6.091743">
+        <ele>118.10413</ele>
+      </trkpt>
+      <trkpt lat="50.855868" lon="6.092964">
+        <ele>120.47308</ele>
+      </trkpt>
+      <trkpt lat="50.855692" lon="6.093425">
+        <ele>125.98906</ele>
+      </trkpt>
+      <trkpt lat="50.855994" lon="6.093977">
+        <ele>123.15252</ele>
+      </trkpt>
+      <trkpt lat="50.85633" lon="6.094429">
+        <ele>120.36027</ele>
+      </trkpt>
+      <trkpt lat="50.856427" lon="6.095032">
+        <ele>123.19802</ele>
+      </trkpt>
+      <trkpt lat="50.856564" lon="6.09534">
+        <ele>123.5217</ele>
+      </trkpt>
+      <trkpt lat="50.856821" lon="6.095676">
+        <ele>122.6696</ele>
+      </trkpt>
+      <trkpt lat="50.857086" lon="6.096444">
+        <ele>124.5154</ele>
+      </trkpt>
+      <trkpt lat="50.857155" lon="6.096856">
+        <ele>120.8747</ele>
+        <name>50.857218,6.096854</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.857148" lon="6.096712">
+        <ele>123.23573</ele>
+      </trkpt>
+      <trkpt lat="50.85725" lon="6.09653">
+        <ele>124.31944</ele>
+      </trkpt>
+      <trkpt lat="50.85766" lon="6.095214">
+        <ele>111.94792</ele>
+      </trkpt>
+      <trkpt lat="50.857804" lon="6.095075">
+        <ele>111.59906</ele>
+      </trkpt>
+      <trkpt lat="50.858037" lon="6.094611">
+        <ele>109.87523</ele>
+      </trkpt>
+      <trkpt lat="50.858178" lon="6.094523">
+        <ele>109.44927</ele>
+      </trkpt>
+      <trkpt lat="50.858384" lon="6.093708">
+        <ele>109.93205</ele>
+      </trkpt>
+      <trkpt lat="50.858755" lon="6.092802">
+        <ele>111.10403</ele>
+      </trkpt>
+      <trkpt lat="50.858551" lon="6.090646">
+        <ele>116.99644</ele>
+        <name>Knotenpunkt 15</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.858511" lon="6.089701">
+        <ele>124.73315</ele>
+        <name>50.858511,6.089701</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.859301" lon="6.089396">
+        <ele>124.78926</ele>
+        <name>Streuobstwiesen</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.85932" lon="6.089352">
+        <ele>125.19123</ele>
+      </trkpt>
+      <trkpt lat="50.859402" lon="6.089214">
+        <ele>126.24137</ele>
+        <name>Knotenpunkt 16</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.860666" lon="6.089576">
+        <ele>121.53025</ele>
+      </trkpt>
+      <trkpt lat="50.861022" lon="6.089842">
+        <ele>120.01162</ele>
+        <name>Knotenpunkt 18</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.861122" lon="6.089904">
+        <ele>119.4565</ele>
+        <name>50.861122,6.089904</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.867281" lon="6.093056">
+        <ele>106.36831</ele>
+        <name>50.867281,6.093056</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.867241" lon="6.094687">
+        <ele>102.8194</ele>
+        <name>Knotenpunkt 34</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.867891" lon="6.09443">
+        <ele>103.88234</ele>
+        <name>Knotenpunkt 33</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.868382" lon="6.094534">
+        <ele>104.90426</ele>
+        <name>50.868378,6.094515</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.868894" lon="6.094245">
+        <ele>104.58224</ele>
+      </trkpt>
+      <trkpt lat="50.869067" lon="6.094224">
+        <ele>104.81165</ele>
+      </trkpt>
+      <trkpt lat="50.869752" lon="6.094485">
+        <ele>106.77101</ele>
+      </trkpt>
+      <trkpt lat="50.869842" lon="6.094425">
+        <ele>107.01027</ele>
+      </trkpt>
+      <trkpt lat="50.869914" lon="6.09453">
+        <ele>107.02999</ele>
+      </trkpt>
+      <trkpt lat="50.871205" lon="6.095018">
+        <ele>107.91727</ele>
+        <name>Knotenpunkt 38</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.871199" lon="6.095052">
+        <ele>108.04622</ele>
+        <name>50.871199,6.095052</name>
+        <extensions>
+          <oa:mapZoom>12</oa:mapZoom>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
