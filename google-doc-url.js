@@ -1,4 +1,4 @@
-var googleDocURL = 'https://docs.google.com/spreadsheets/d/1mOBUbBVXFkRgtACWeZU8R3Q0OiOtaKw_SeUhtNbbcF4/edit?gid=601836913#gid=601836913';
+var googleDocURL = 'https://docs.google.com/spreadsheets/d/1ywHQ_NWgWjGWXwL1r7Uo7omQULp-cR44doHMHG85kwo/edit?gid=164271551#gid=164271551';
 //var googleDocURLpoints = 'https://docs.google.com/spreadsheets/d/1ID05WlFWD7y5zPCJ8godU8LlzhR1SI07kE-7inWTpbo/edit#gid=0';
 var googleDocURLpoints = 'https://docs.google.com/spreadsheets/d/1mOBUbBVXFkRgtACWeZU8R3Q0OiOtaKw_SeUhtNbbcF4/edit#gid=164271551';
 var googleDocURLreceptie='https://docs.google.com/spreadsheets/d/1R_5tZo6OigFcFBP3TPxpRj0heqi2740Hn543vgPZFIQ/edit#gid=1619475893';
