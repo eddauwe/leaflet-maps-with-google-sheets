@@ -239,10 +239,6 @@ $(window).on('load', function() {
         + getSetting('_pointsLegendIcon') + '"></i></span>');
     }
 
-    points-legend.onclick = function() {
-  	$('.leaflet-control-layers').toggle();
-    }
-
     var displayTable = getSetting('_displayTable') == 'on' ? true : false;
 
     // Display table with active points if specified
