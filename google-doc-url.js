@@ -14,3 +14,5 @@ var googleApiKey = 'AIzaSyBJJ6sOFPYo2i8mBmTugvF0DP56O9kR5LA';
 
 //parijsreis
 var googleDocURLparijs = 'https://docs.google.com/spreadsheets/d/1GkGPli2wmz6f8lYyrY2lBtGlGDyFI7dmpkWmffjkI38/edit#gid=164271551';
+//oostenrijkreis
+var googleDocURLoostenrijk = 'https://docs.google.com/spreadsheets/d/1ywHQ_NWgWjGWXwL1r7Uo7omQULp-cR44doHMHG85kwo/edit?gid=164271551#gid=164271551';
