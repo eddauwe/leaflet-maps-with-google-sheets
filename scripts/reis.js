@@ -1066,36 +1066,36 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 });
 
 // Weather layers
-const API_KEY = '37f5cdcf89881b10ad4179a6f77d0039';
+const API_KEY = '8c69ef862f6959e49ecd8f01b6d78eb8';
 var weatherLayers = {
 precipitation:
-L.tileLayer(`https://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=${API_KEY}`, {
+L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.
+png?appid=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-op: 'PA0',
 opacity: 1
 }),
 clouds:
-L.tileLayer(`https://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=${API_KEY}`, {
+L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?a
+ppid=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-op: 'CL',
 opacity: 1
 }),
 pressure:
-L.tileLayer(`https://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=${API_KEY}`, {
+L.tileLayer(`https://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?
+appid=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-op: 'APM',
-opacity: 1
+	opacity: 1
 }),
 wind:
-L.tileLayer(`https://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=${API_KEY}`, {
+L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?app
+id=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-op: 'WND',
 opacity: 1
 }),
 temperature:
-L.tileLayer(`https://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=${API_KEY}`, {
+L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?app
+id=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-op: 'TA2',
 opacity: 1,
 palette:'-10:3333cc;-5:00ffff;0:66ff66;5:ccff66;10:ffff66;15:ff9900;20:ff3300',
 fill_bound: true
