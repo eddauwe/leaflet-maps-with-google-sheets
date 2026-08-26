@@ -1059,6 +1059,41 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
 
+// Weather layers
+const API_KEY = '8c69ef862f6959e49ecd8f01b6d78eb8';
+var weatherLayers = {
+precipitation:
+L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.
+png?appid=${API_KEY}`, {
+attribution: '© OpenWeatherMap',
+opacity: 0.6
+}),
+clouds:
+L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?a
+ppid=${API_KEY}`, {
+attribution: '© OpenWeatherMap',
+opacity: 0.6
+}),
+pressure:
+L.tileLayer(`https://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?
+appid=${API_KEY}`, {
+attribution: '© OpenWeatherMap',
+	opacity: 0.6
+}),
+wind:
+L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?app
+id=${API_KEY}`, {
+attribution: '© OpenWeatherMap',
+opacity: 0.6
+}),
+temperature:
+L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?app
+id=${API_KEY}`, {
+attribution: '© OpenWeatherMap',
+opacity: 0.6
+})
+};
+
 // Sentinel Hub WMS service
  // tiles generated using EPSG:3857 projection - Leaflet takes care of that
  var baseUrl = "https://sh.dataspace.copernicus.eu/ogc/wms/2605c2d0-e927-4e78-9763-e5777b9499cf";
@@ -1085,6 +1120,11 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 	  
 	var overlayMaps = {
 	    "Waymarkedtrails": WaymarkedTrails_hiking
+		"Precipitation": weatherLayers.precipitation,
+		"Clouds": weatherLayers.clouds,
+		"Pressure": weatherLayers.pressure,
+		"Wind Speed": weatherLayers.wind,
+		"Temperature": weatherLayers.temperature
 	};
     
     L.control.attribution({
