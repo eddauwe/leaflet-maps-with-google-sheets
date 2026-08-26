@@ -1119,7 +1119,7 @@ opacity: 0.6
 	  
 	  
 	var overlayMaps = {
-	    "Waymarkedtrails": WaymarkedTrails_hiking
+	    "Waymarkedtrails": WaymarkedTrails_hiking,
 		"Precipitation": weatherLayers.precipitation,
 		"Clouds": weatherLayers.clouds,
 		"Pressure": weatherLayers.pressure,
