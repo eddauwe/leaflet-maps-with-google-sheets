@@ -1066,31 +1066,31 @@ precipitation:
 L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.
 png?appid=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-opacity: 0.9
+opacity: 1
 }),
 clouds:
 L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?a
 ppid=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-opacity: 0.9
+opacity: 1
 }),
 pressure:
 L.tileLayer(`https://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?
 appid=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-	opacity: 0.9
+	opacity: 1
 }),
 wind:
 L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?app
 id=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-opacity: 0.9
+opacity: 1
 }),
 temperature:
 L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?app
 id=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-opacity: 0.9
+opacity: 1
 })
 };
 
