@@ -1073,7 +1073,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
  }
 
  var ndvi = createWmsLayer("NDVI");
- var trueColor = createWmsLayer("TRUE-COLOR");
+ var trueColor = createWmsLayer("TRUE_COLOR");
  var urbanAreas = createWmsLayer("URBAN-AREAS");
  var sentinel2cloudless = createWmsLayer("SENTINEL-2-CLOUDLESS");
 	  
