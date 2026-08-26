@@ -1090,7 +1090,8 @@ temperature:
 L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?app
 id=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
-opacity: 1
+opacity: 1,
+palette:'-10:3333cc;0:ffff66;10:ff3300'
 })
 };
 
