@@ -1066,7 +1066,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 });
 
 // Weather layers
-const API_KEY = '8c69ef862f6959e49ecd8f01b6d78eb8';
+const API_KEY = '37f5cdcf89881b10ad4179a6f77d0039';
 var weatherLayers = {
 precipitation:
 L.tileLayer(`https://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=${API_KEY}`, {
