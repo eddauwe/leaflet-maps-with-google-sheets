@@ -1091,7 +1091,8 @@ L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?app
 id=${API_KEY}`, {
 attribution: '© OpenWeatherMap',
 opacity: 1,
-palette:'-10:3333cc;0:ffff66;10:ff3300'
+palette:'-10:3333cc;-5:00ffff;0:66ff66;5:ccff66;10:ffff66;15:ff9900;20:ff3300',
+fill_bound: true
 })
 };
 
