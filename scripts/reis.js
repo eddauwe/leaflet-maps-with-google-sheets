@@ -1048,6 +1048,11 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 	apikey: '<your apikey>',
 	maxZoom: 22
 });
+
+	  var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
 	  //overlaymaps
 	  var WaymarkedTrails_hiking = L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
 	maxZoom: 18,
@@ -1090,6 +1095,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
     basemaps["CyclOSM"]=CyclOSM;
     basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
 	basemaps["SentinelTrueColor"]=trueColor;
+	basemaps["EsriWorldImagery"]=Esri_WorldImagery;
     L.control.layers(basemaps,overlayMaps).addTo(map);		   
    
   
