@@ -1053,6 +1053,29 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
 	maxZoom: 18,
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
+
+// Sentinel Hub WMS service
+ // tiles generated using EPSG:3857 projection - Leaflet takes care of that
+ var baseUrl = "https://sh.dataspace.copernicus.eu/ogc/wms/2605c2d0-e927-4e78-9763-e5777b9499cf";
+
+ function createWmsLayer(layerId) {
+
+ const layer = L.tileLayer.wms(baseUrl, {
+ tileSize: 512,
+ attribution: '&copy; <a href="https://dataspace.copernicus.eu/" target="_blank">Copernicus Data Space Ecosystem</a>',
+ maxcc: 20,
+ minZoom: 6,
+ maxZoom: 16,
+ layers: layerId,
+ time:"2023-06-01/2023-12-13"
+ });
+ return layer;
+ }
+
+ var ndvi = createWmsLayer("NDVI");
+ var trueColor = createWmsLayer("TRUE-COLOR");
+ var urbanAreas = createWmsLayer("URBAN-AREAS");
+ var sentinel2cloudless = createWmsLayer("SENTINEL-2-CLOUDLESS");
 	  
 	  
 	var overlayMaps = {
@@ -1066,6 +1089,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
     basemaps["OpenTopoMap"]=OpenTopoMap;
     basemaps["CyclOSM"]=CyclOSM;
     basemaps["OpenCycleMap"]=Thunderforest_OpenCycleMap;
+	basemaps["SentinelTrueColor"]=trueColor;
     L.control.layers(basemaps,overlayMaps).addTo(map);		   
    
   
