@@ -1063,11 +1063,7 @@ var Thunderforest_OpenCycleMap = L.tileLayer('https://tile.thunderforest.com/cyc
  const layer = L.tileLayer.wms(baseUrl, {
  tileSize: 512,
  attribution: '&copy; <a href="https://dataspace.copernicus.eu/" target="_blank">Copernicus Data Space Ecosystem</a>',
- maxcc: 20,
- minZoom: 6,
- maxZoom: 16,
- layers: layerId,
- time:"2023-06-01/2023-12-13"
+ layers: layerId
  });
  return layer;
  }
